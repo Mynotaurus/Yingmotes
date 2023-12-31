@@ -1,6 +1,7 @@
 import os
 import shutil
 import subprocess
+import sys
 
 #first we get all the svgs
 print("-- Finding SVGs...")
@@ -84,6 +85,9 @@ for pal in palettes.keys():
         print("--- Directory already exists.")
     
     for vectorfile in svgs:
+        if(len(sys.argv)>1):
+            if(vectorfile not in sys.argv):
+                continue #if files are specified as arguments, only export those files
         data = ""
         print("-- Changing "+vectorfile+" to "+pal+"...")
         #hell yeah lets ctrl+h the heck out of this file
