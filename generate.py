@@ -69,7 +69,7 @@ res = [128,720] #resolutions to export at!
 def convert_with_inkscape(file,res,out):
     #call inkscape from command line to export - this renders svgs slowly but accurately
     args = "inkscape --without-gui " + file + " --export-area-page -w "+ str(res)+" -h "+ str(res)+" --export-filename=" + out
-    print(subprocess.run(args)) #if this says "returncode=0" thats good! if its not a zero thats bad, smths going wrong
+    print(subprocess.run(args,shell=True)) #if this says "returncode=0" thats good! if its not a zero thats bad, smths going wrong
 
 for pal in palettes.keys():
     newcols = palettes[pal]
