@@ -11,6 +11,8 @@ Each color scheme has .svg files, .png files at 128px and 720px, and pre-zipped 
 
 For most purposes, I would recommend the **orange** color scheme, as it has the best contrast for most use cases, but the others are left in for variety and demonstration of what you can do with custom colors :>
 
+Yinglets are the creation of [Valsalia](https://www.valsalia.com/)
+
 ## Usage
 if ive done it right, i think the prezipped @128px versions should work perfectly for importing into fediverse servers
 
