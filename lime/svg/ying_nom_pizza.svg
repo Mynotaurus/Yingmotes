@@ -28,7 +28,7 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.32026963"
-     inkscape:cx="594.81132"
+     inkscape:cx="596.3725"
      inkscape:cy="941.39429"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
@@ -79,9 +79,10 @@
            sodipodi:nodetypes="sssss" />
         <path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#131;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="M 498.97372,962.62186 V 1132.6262"
+           d="m 473.98335,965.65151 24.99037,166.97469"
            id="path2372"
-           inkscape:label="pupil left" />
+           inkscape:label="pupil left"
+           sodipodi:nodetypes="cc" />
       </g>
       <path
          style="opacity:1;fill:#3b4;fill-opacity:1;stroke:#3b4;stroke-width:64;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
