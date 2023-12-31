@@ -3,7 +3,7 @@ A customisable yinglet emote pack!
 
 ![](/lemon/png128/ying_lurk.png)![](/lime/png128/ying_lurk.png)![](/myno/png128/ying_lurk.png)![](/orange/png128/ying_lurk.png)
 
-![](/lemon/png128/ying_nom_pizza.png)![](/lime/png128/ying_nom_pizza.png)![](/myno/png128/ying_nom_pizza.png)![](/orange/png128/ying_nom_pizza.png)
+![](/lemon/png128/ying_nom_fish.png)![](/lime/png128/ying_nom_fish.png)![](/myno/png128/ying_nom_fish.png)![](/orange/png128/ying_nom_fish.png)
 
 ![](/lemon/png128/ying_sleep.png)![](/lime/png128/ying_sleep.png)![](/myno/png128/ying_sleep.png)![](/orange/png128/ying_sleep.png)
 
