@@ -12,18 +12,18 @@ for entry in os.listdir(basepath):
 
 
 defaultcols = {
-    "main":  "#ffcb4c",     #primary colour
-    "eye" :  "#fefefe",    #eye colour
+    "main":  "#ffcb4c",   #primary colour
+    "eye" :  "#fefefe",   #eye colour
     "line" : "#65471b",   #line colours
     "dark" : "#f19020",   #darker version of the primary colour for background details
-    "lid" :  "#d19020",    #eyelid colour
+    "lid" :  "#d19020",   #eyelid colour
     "hand" : "#a18020",   #hand colour, needs to be different from others for contrast
-    "tongue":"#ff5678", #tongue colour (for all important bleps)
+    "tongue":"#ff5678",   #tongue colour (for all important bleps)
     "hair" : "#123456",   #hair colour, only shown when enabled
     "show_all":False      #show_all shows all hidden layers, this adds hair and tail tuft (atm, these cannot be enabled seperately in this script :/ sorry)
 }
 
-palettes = {
+palettes = { #this is where the palettes to export are defined
     "orange" : {
         #nothing is changed!
     },
@@ -60,6 +60,8 @@ palettes = {
         "tongue":"#ff66aa",
         "show_all":True
     }
+
+    #you can add your own palettes to this list
 }
 
 res = [128,720] #resolutions to export at!
@@ -67,7 +69,7 @@ res = [128,720] #resolutions to export at!
 def convert_with_inkscape(file,res,out):
     #call inkscape from command line to export - this renders svgs slowly but accurately
     args = "inkscape --without-gui " + file + " --export-area-page -w "+ str(res)+" -h "+ str(res)+" --export-filename=" + out
-    print(subprocess.run(args))
+    print(subprocess.run(args)) #if this says "returncode=0" thats good! if its not a zero thats bad, smths going wrong
 
 for pal in palettes.keys():
     newcols = palettes[pal]
