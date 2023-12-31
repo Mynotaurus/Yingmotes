@@ -3,7 +3,7 @@ import shutil
 import subprocess
 
 #first we get all the svgs
-print("Finding SVGs...")
+print("-- Finding SVGs...")
 basepath = "./"
 svgs = []
 for entry in os.listdir(basepath):
@@ -68,24 +68,24 @@ res = [128,720] #resolutions to export at!
 
 def convert_with_inkscape(file,res,out):
     #call inkscape from command line to export - this renders svgs slowly but accurately
-    args = "inkscape --without-gui " + file + " --export-area-page -w "+ str(res)+" -h "+ str(res)+" --export-filename=" + out
+    args = "inkscape " + file + " --export-area-page -w "+ str(res)+" -h "+ str(res)+" --export-filename=" + out
     print(subprocess.run(args,shell=True)) #if this says "returncode=0" thats good! if its not a zero thats bad, smths going wrong
 
 for pal in palettes.keys():
     newcols = palettes[pal]
     #make all the folders!!
     try:
-        print("Making new directory...")
+        print("-- Making new directory...")
         os.mkdir(pal)
         os.mkdir(pal+"/svg")
         for i in res:
             os.mkdir(pal+"/png"+str(i))
     except:
-        print("Directory already exists.")
+        print("--- Directory already exists.")
     
     for vectorfile in svgs:
         data = ""
-        print("Changing "+vectorfile+" to "+pal+"...")
+        print("-- Changing "+vectorfile+" to "+pal+"...")
         #hell yeah lets ctrl+h the heck out of this file
         with open(vectorfile, 'r') as f:
             data = f.read()
@@ -99,15 +99,15 @@ for pal in palettes.keys():
                 if(newcols["show_all"]):
                     data = data.replace("display:none;","display:inline;")
 
-        print("Saving vector "+pal+"/svg/"+vectorfile+"...")
+        print("-- Saving vector "+pal+"/svg/"+vectorfile+"...")
         with open(pal+"/svg/"+vectorfile, 'w') as f:
             f.write(data)
 
         for i in res:
-            print("Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
+            print("-- Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
             convert_with_inkscape(pal+"/svg/"+vectorfile, i, pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png"))
     
-    print("Making zips for "+pal)
+    print("-- Making zips for "+pal)
     for i in res:
         shutil.make_archive("Yingmotes_"+pal+"@"+str(i)+"px", 'zip', pal+"/png"+str(i))
 
