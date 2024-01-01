@@ -20,8 +20,10 @@ defaultcols = {
     "lid" :  "#d19020",   #eyelid colour
     "hand" : "#a18020",   #hand colour, needs to be different from others for contrast
     "tongue":"#ff5678",   #tongue colour (for all important bleps)
-    "hair" : "#123456",   #hair colour, only shown when enabled
-    "show_all":False      #show_all shows all hidden layers, this adds hair and tail tuft (atm, these cannot be enabled seperately in this script :/ sorry)
+    "hair" : "#123456",   #hair colour, only shown when show_all = True
+    "tail" : "#234567",   #tail colour, only shown when show_all = True
+    "show_all":False      #show_all shows all hidden layers, this renders both the hair and tail tuft
+    # to hide either hair or tail seperately, set its color to #0000, this makes it transparent (must be exactly #0000 to work)
 }
 
 palettes = { #this is where the palettes to export are defined
@@ -47,6 +49,7 @@ palettes = { #this is where the palettes to export are defined
         "hand":"#474",
         "tongue":"#141",
         "hair":"#262",
+        "tail":"#262",
         "show_all":True
     },
 
@@ -58,6 +61,7 @@ palettes = { #this is where the palettes to export are defined
         "lid" : "#a99f8b",
         "hand" : "#a99f8b",
         "hair" : "#913fef",
+        "tail" : "#913fef",
         "tongue":"#ff66aa",
         "show_all":True
     }
@@ -94,6 +98,10 @@ for pal in palettes.keys():
         with open(vectorfile, 'r') as f:
             data = f.read()
             for key in newcols.keys():
+                if(newcols[key]=="#0000"):
+                    #if any color is set to #0000, set its opacity to zero
+                    #(yes i could implement partial transparency relatively trivially but im eepy so this will do for now)
+                    data = data.replace(defaultcols[key]+";fill-opacity:1","PLACEHOLDER_"+key+";fill-opacity:0")
                 if(key!="show_all"):
                     data = data.replace(defaultcols[key],"PLACEHOLDER_"+key)
             for key in newcols.keys():
