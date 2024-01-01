@@ -80,20 +80,20 @@ for pal in palettes.keys():
     newcols = palettes[pal]
     #make all the folders!!
     try:
-        print("-- Making new directory...")
+        print("- Making new directory for "+pal+"...")
         os.mkdir(pal)
         os.mkdir(pal+"/svg")
         for i in res:
             os.mkdir(pal+"/png"+str(i))
     except:
-        print("--- Directory already exists.")
+        print(" - Directory already exists.")
     
     for vectorfile in svgs:
         if(len(sys.argv)>1):
             if(vectorfile not in sys.argv):
                 continue #if files are specified as arguments, only export those files
         data = ""
-        print("-- Changing "+vectorfile+" to "+pal+"...")
+        print("- Changing "+vectorfile+" to "+pal+"...")
         #hell yeah lets ctrl+h the heck out of this file
         with open(vectorfile, 'r') as f:
             data = f.read()
@@ -110,16 +110,28 @@ for pal in palettes.keys():
             if("show_all" in newcols.keys()):
                 if(newcols["show_all"]):
                     data = data.replace("display:none;","display:inline;")
-
-        print("-- Saving vector "+pal+"/svg/"+vectorfile+"...")
+    
+        #check if files are already exported and if so, skip them
+        if(os.path.exists(pal+"/svg/"+vectorfile)):
+            with open(pal+"/svg/"+vectorfile, 'r') as f:
+                if(f.read()==data):
+                    allpngs = True
+                    for i in res:
+                        if(not os.path.exists(pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png"))):
+                            allpngs = False
+                    if(allpngs):
+                        print(" - SVGs match and all PNGs exist. Skipping...")
+                        continue
+        
+        print(" - Saving vector "+pal+"/svg/"+vectorfile+"...")
         with open(pal+"/svg/"+vectorfile, 'w') as f:
             f.write(data)
 
         for i in res:
-            print("-- Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
+            print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
             convert_with_inkscape(pal+"/svg/"+vectorfile, i, pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png"))
     
-    print("-- Making zips for "+pal)
+    print("- Making zips for "+pal)
     for i in res:
         shutil.make_archive("Yingmotes_"+pal+"@"+str(i)+"px", 'zip', pal+"/png"+str(i))
 
