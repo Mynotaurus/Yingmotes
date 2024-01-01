@@ -28,14 +28,14 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.32026963"
-     inkscape:cx="113.96647"
+     inkscape:cx="112.40529"
      inkscape:cy="1119.3693"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1992" />
+     inkscape:current-layer="g12988" />
   <g
      id="layer1"
      inkscape:label="Ying"
@@ -79,9 +79,10 @@
            sodipodi:nodetypes="sssss" />
         <path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#880056;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="M 498.97372,962.62186 V 1132.6262"
+           d="m 473.75014,968.9283 25.22358,163.6979"
            id="path2372"
-           inkscape:label="pupil left" />
+           inkscape:label="pupil left"
+           sodipodi:nodetypes="cc" />
       </g>
       <path
          style="opacity:1;fill:#a99f8b;fill-opacity:1;stroke:#a99f8b;stroke-width:64;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"

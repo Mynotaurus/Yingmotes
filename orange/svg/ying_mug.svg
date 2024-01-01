@@ -28,8 +28,8 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.22646483"
-     inkscape:cx="326.76156"
-     inkscape:cy="426.11474"
+     inkscape:cx="326.76155"
+     inkscape:cy="426.11473"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -43,7 +43,7 @@
      inkscape:groupmode="layer">
     <path
        style="display:none;fill:#123456;stroke:#123456;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000"
-       d="m 1298.031,865.09775 c 70.7982,131.45402 185.3824,239.02475 198.7064,401.82835 -29.438,-19.1346 -55.9321,-14.719 -79.4825,13.2471 91.0222,54.7003 58.5139,175.917 81.6903,267.1496 l -99.3531,6.6236 c 66.7588,58.9185 81.773,128.1858 90.5218,198.7063 l -494.50725,2.2079 c -24.3802,-41.4813 23.11455,-208.5632 66.23555,-227.0436 0,0 3.3791,-20.0154 -75.35325,-9.4549 C 1015.23,1271.0896 1172.1837,1096.1858 1298.031,865.09775 Z"
+       d="m 1430.5019,851.85066 c 70.7982,131.45402 185.3824,239.02474 198.7064,401.82834 -29.438,-19.1346 -55.9321,-14.719 -79.4825,13.2471 91.0222,54.7003 58.5139,175.917 81.6903,267.1496 l -99.3531,6.6236 c 66.7588,58.9185 81.773,128.1858 90.5218,198.7063 l -494.5072,2.2079 c -24.3802,-41.4813 23.1145,-208.5632 66.2355,-227.0436 0,0 3.3791,-20.0154 -75.3532,-9.4549 28.741,-247.2725 185.6947,-422.1763 311.542,-653.26434 z"
        id="path3091"
        sodipodi:nodetypes="cccccccccc"
        inkscape:label="mane" />
@@ -80,9 +80,10 @@
            sodipodi:nodetypes="sssss" />
         <path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#65471b;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="M 498.97372,962.62186 V 1132.6262"
+           d="m 473.27072,969.04817 25.703,163.57803"
            id="path2372"
-           inkscape:label="pupil left" />
+           inkscape:label="pupil left"
+           sodipodi:nodetypes="cc" />
       </g>
       <path
          style="opacity:1;fill:#f19020;fill-opacity:1;stroke:#f19020;stroke-width:64;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
