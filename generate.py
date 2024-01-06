@@ -96,6 +96,7 @@ for pal in palettes.keys():
     #make all the folders!!
     try:
         print("- Making new directory for "+pal+"...")
+        os.mkdir("out")
         os.mkdir("out/"+pal)
         os.mkdir("out/"+pal+"/svg")
         for i in res:
