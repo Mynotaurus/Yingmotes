@@ -33,7 +33,7 @@ palettes = { #this is where the palettes to export are defined
         #nothing is changed!
     },
 
-    "lemon" : {
+    "yinglemon" : {
         "main" : "#ffff00", 
         "line" : "#6a6a1c", 
         "dark" : "#cccc00", 
@@ -42,7 +42,7 @@ palettes = { #this is where the palettes to export are defined
         "tongue":"#d40000"  
     },
 
-    "lime" : {
+    "yinglime" : {
         "main":"#9f8",
         "eye":"#cff",
         "line":"#131",
@@ -68,7 +68,7 @@ palettes = { #this is where the palettes to export are defined
         "show_all":True
     },
     
-        "thio" : {
+    "thio" : {
         "main":"#b79879",
         "eye" : "#6574c1",
         "line" : "#3a332d",
