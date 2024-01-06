@@ -87,13 +87,13 @@
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#65471b;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
            d="m 498.97372,962.62186 v 50.23624"
            id="path2372"
-           inkscape:label="pupil left" />
+           inkscape:label="left pupil" />
       </g>
       <path
          style="opacity:1;fill:#f19020;fill-opacity:1;stroke:#f19020;stroke-width:64;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
          d="m 829.90316,824.13587 c 0,0 -36.35096,-173.47026 -18.02393,-355.28085 20.16156,-200.00973 111.85589,-410.673286 180.44114,-410.46193 68.58523,0.211357 165.47103,203.70903 184.72473,344.42279 19.2537,140.71377 -34.4905,444.67161 -34.4905,444.67161 z"
          id="path1640"
-         inkscape:label="leftear"
+         inkscape:label="left ear"
          sodipodi:nodetypes="cssscc"
          inkscape:transform-center-x="-5.0680972"
          inkscape:transform-center-y="-241.97226" />
@@ -112,7 +112,7 @@
       <path
          id="path13483"
          style="display:inline;opacity:1;fill:#ffcb4c;stroke:#ffcb4c;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6.4, 6.4;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-         inkscape:label="rightear"
+         inkscape:label="right ear"
          d="m 1219.004,39.333288 c -77.2892,18.543151 -166.7133,332.951942 -173.2434,423.010192 -5.8141,80.18266 -33.325,285.13383 -41.1751,343.22775 20.6751,370.84017 218.6759,310.77617 339.488,328.74667 66.7692,-136.88723 184.5032,-419.62777 141.0217,-638.87945 C 1425.5637,195.2566 1269.1244,27.308471 1219.004,39.333288 Z"
          sodipodi:nodetypes="ssccss"
          inkscape:transform-center-x="-43.12891"
@@ -156,7 +156,7 @@
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#65471b;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
            d="m 841.19021,1018.5373 v 52.7658"
            id="path2350"
-           inkscape:label="pupil right" />
+           inkscape:label="right pupil" />
       </g>
       <path
          style="opacity:1;fill:none;fill-opacity:1;stroke:#ffcb4c;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"

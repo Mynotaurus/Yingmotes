@@ -81,13 +81,13 @@
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#65471b;stroke-width:48.9852;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
            d="m 530.31236,930.9268 v 170.0043"
            id="path2372"
-           inkscape:label="pupil left" />
+           inkscape:label="left pupil" />
       </g>
       <path
          style="opacity:1;fill:#f19020;fill-opacity:1;stroke:#f19020;stroke-width:65.3136;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
          d="m 785.98445,912.64707 c 0,0 67.4977,-163.48872 184.76277,-302.50584 129.00338,-152.93269 322.97038,-273.63853 379.39908,-234.16526 56.4288,39.47329 21.9695,262.34264 -41.2196,389.09612 -63.1891,126.75351 -278.2866,345.92871 -278.2866,345.92871 z"
          id="path1640"
-         inkscape:label="leftear"
+         inkscape:label="left ear"
          sodipodi:nodetypes="cssscc"
          inkscape:transform-center-x="-94.835918"
          inkscape:transform-center-y="-163.72317" />
@@ -105,7 +105,7 @@
       <path
          id="path13483"
          style="display:inline;opacity:1;fill:#ffcb4c;stroke:#ffcb4c;stroke-width:65.3136;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6.53136, 6.53136;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-         inkscape:label="rightear"
+         inkscape:label="right ear"
          d="m 1707.884,225.39593 c -72.9338,-31.9682 -331.2021,165.27716 -389.8886,233.3299 -52.251,60.59024 -195.9432,207.80334 -236.7148,249.49979 -203.54715,309.02428 -9.2493,380.87858 76.884,468.39218 134.7481,-69.0237 396.9028,-223.80835 492.2008,-425.43758 130.4744,-276.05459 104.8145,-505.05364 57.5186,-525.78429 z"
          sodipodi:nodetypes="ssccss"
          inkscape:transform-center-x="-220.05563"
@@ -163,12 +163,12 @@
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#65471b;stroke-width:48.9852;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
            d="M 896.90335,957.84079 V 1147.7157"
            id="path2350"
-           inkscape:label="pupil right" />
+           inkscape:label="right pupil" />
         <path
            id="path1749"
            style="fill:#d19020;stroke:#65471b;stroke-width:65.3136;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000"
            d="m 925.63867,1159.8789 a 181.24155,186.60266 0 0 0 -159.73047,99.4063 c 25.91815,22.4745 62.42395,34.5136 111.80469,34.5136 62.20101,0 132.62321,-26.0259 186.32621,-67.7285 a 181.24155,186.60266 0 0 0 -138.40043,-66.1914 z"
-           inkscape:label="rightlid" />
+           inkscape:label="right lid" />
       </g>
       <path
          style="opacity:1;fill:none;fill-opacity:1;stroke:#ffcb4c;stroke-width:32.6568;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
