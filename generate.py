@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import shutil
 import subprocess
@@ -5,7 +7,7 @@ import sys
 
 #first we get all the svgs
 print("-- Finding SVGs...")
-basepath = "./"
+basepath = "./svg/"
 svgs = []
 for entry in os.listdir(basepath):
     if(entry.endswith(".svg")):
@@ -27,7 +29,7 @@ defaultcols = {
 }
 
 palettes = { #this is where the palettes to export are defined
-    "orange" : {
+    "ying" : {
         #nothing is changed!
     },
 
@@ -64,6 +66,19 @@ palettes = { #this is where the palettes to export are defined
         "tail" : "#913fef",
         "tongue":"#ff66aa",
         "show_all":True
+    },
+    
+        "thio" : {
+        "main":"#b79879",
+        "eye" : "#6574c1",
+        "line" : "#3a332d",
+        "dark" : "#b58765",
+        "lid" : "#ddcdbd",
+        "hand" : "#3a332d",
+        "hair" : "#6dadfb",
+        "tongue":"#953036",
+        "tail":"#ddcdbd",
+        "show_all":True
     }
 
     #you can add your own palettes to this list
@@ -81,10 +96,10 @@ for pal in palettes.keys():
     #make all the folders!!
     try:
         print("- Making new directory for "+pal+"...")
-        os.mkdir(pal)
-        os.mkdir(pal+"/svg")
+        os.mkdir("out/"+pal)
+        os.mkdir("out/"+pal+"/svg")
         for i in res:
-            os.mkdir(pal+"/png"+str(i))
+            os.mkdir("out/"+pal+"/png"+str(i))
     except:
         print(" - Directory already exists.")
     
@@ -95,7 +110,7 @@ for pal in palettes.keys():
         data = ""
         print("- Changing "+vectorfile+" to "+pal+"...")
         #hell yeah lets ctrl+h the heck out of this file
-        with open(vectorfile, 'r') as f:
+        with open("svg/"+vectorfile, 'r') as f:
             data = f.read()
             for key in newcols.keys():
                 if(newcols[key]=="#0000"):
@@ -112,26 +127,26 @@ for pal in palettes.keys():
                     data = data.replace("display:none;","display:inline;")
     
         #check if files are already exported and if so, skip them
-        if(os.path.exists(pal+"/svg/"+vectorfile)):
-            with open(pal+"/svg/"+vectorfile, 'r') as f:
+        if(os.path.exists("out/"+pal+"/svg/"+vectorfile.replace("ying",pal))):
+            with open("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), 'r') as f:
                 if(f.read()==data):
                     allpngs = True
                     for i in res:
-                        if(not os.path.exists(pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png"))):
+                        if(not os.path.exists("out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))):
                             allpngs = False
                     if(allpngs):
                         print(" - SVGs match and all PNGs exist. Skipping...")
                         continue
         
         print(" - Saving vector "+pal+"/svg/"+vectorfile+"...")
-        with open(pal+"/svg/"+vectorfile, 'w') as f:
+        with open("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), 'w') as f:
             f.write(data)
 
         for i in res:
             print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
-            convert_with_inkscape(pal+"/svg/"+vectorfile, i, pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png"))
+            convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
     
     print("- Making zips for "+pal)
     for i in res:
-        shutil.make_archive("Yingmotes_"+pal+"@"+str(i)+"px", 'zip', pal+"/png"+str(i))
+        shutil.make_archive("out/Yingmotes_"+pal+"@"+str(i)+"px", 'zip', "out/"+pal+"/png"+str(i))
 
