@@ -1,15 +1,11 @@
 # Yingmotes
 A customisable yinglet emote pack!
 
-![](/lemon/png128/ying_lurk.png)![](/lime/png128/ying_lurk.png)![](/myno/png128/ying_lurk.png)![](/orange/png128/ying_lurk.png)
-
-![](/lemon/png128/ying_nom_clam.png)![](/lime/png128/ying_nom_clam.png)![](/myno/png128/ying_nom_clam.png)![](/orange/png128/ying_nom_clam.png)
-
-![](/lemon/png128/ying_sleep.png)![](/lime/png128/ying_sleep.png)![](/myno/png128/ying_sleep.png)![](/orange/png128/ying_sleep.png)
+![ying](https://github.com/mothdotmonster/yingmotes/assets/82258270/c9da2fd7-b618-4042-9483-1b8f296b2cba) ![lemon](https://github.com/mothdotmonster/yingmotes/assets/82258270/6c95a275-0123-428c-9058-81a30029bdd2) ![lime](https://github.com/mothdotmonster/yingmotes/assets/82258270/0298eddb-fd49-4db1-ad21-3a68b436467e) ![myno](https://github.com/mothdotmonster/yingmotes/assets/82258270/5495b5c7-f61c-4520-b2b1-75072be857c2) ![thio](https://github.com/mothdotmonster/yingmotes/assets/82258270/7664302d-a194-491e-a74a-ce23e44e068e)
 
 Each color scheme has .svg files, .png files at 128px and 720px, and pre-zipped folders for each png format.
 
-For most purposes, I would recommend the **orange** color scheme, as it has the best contrast for most use cases, but the others are left in for variety and demonstration of what you can do with custom colors :>
+For most purposes, I would recommend the **ying** color scheme, as it has the best contrast for most use cases, but the others are left in for variety and demonstration of what you can do with custom colors :>
 
 Yinglets are the creation of [Valsalia](https://www.valsalia.com/)
 
