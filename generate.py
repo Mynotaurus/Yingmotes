@@ -91,12 +91,17 @@ def convert_with_inkscape(file,res,out):
     args = "inkscape " + file + " --export-area-page -w "+ str(res)+" -h "+ str(res)+" --export-filename=" + out
     print(subprocess.run(args,shell=True)) #if this says "returncode=0" thats good! if its not a zero thats bad, smths going wrong
 
+print("- Making output directory...")
+try:
+    os.mkdir("out")
+except:
+    print("- Output directory already exists.")
+
 for pal in palettes.keys():
     newcols = palettes[pal]
     #make all the folders!!
     try:
         print("- Making new directory for "+pal+"...")
-        os.mkdir("out")
         os.mkdir("out/"+pal)
         os.mkdir("out/"+pal+"/svg")
         for i in res:
