@@ -28,14 +28,20 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.32026963"
-     inkscape:cx="771.22516"
-     inkscape:cy="816.49951"
+     inkscape:cx="766.54162"
+     inkscape:cy="816.49952"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg824" />
+  <path
+     style="display:none;fill:#123456;stroke:#123456;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000"
+     d="m 990.04147,624.69823 c -13.27402,148.71556 -76.20248,292.73309 -24.29947,447.61557 19.51689,-29.1859 45.6075,-35.5669 78.2721,-19.1429 -62.10508,86.1402 15.536,184.7412 30.1827,277.7252 l 93.9252,-33.0602 c -38.1424,80.4567 -24.6488,150.0363 -4.9027,218.2988 l 455.3709,-192.82 c 6.063,-47.7319 -103.4242,-182.5825 -150.3384,-182.5769 0,0 -10.9923,-17.0646 65.5315,-38.3813 C 1409.9353,886.41355 1196.7626,787.50367 990.04147,624.69823 Z"
+     id="path3091"
+     sodipodi:nodetypes="cccccccccc"
+     inkscape:label="mane" />
   <g
      id="layer1"
      inkscape:label="Ying"

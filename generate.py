@@ -86,6 +86,16 @@ palettes = { #this is where the palettes to export are defined
 
 res = [128,720] #resolutions to export at!
 
+filtered_palettes = {} #specifying palette names in the command line arguments will only export those palettes
+palette_count = 0
+for pal in palettes.keys():
+    if(pal in sys.argv):
+        filtered_palettes[pal] = palettes[pal]
+        palette_count += 1
+if(len(filtered_palettes.keys())>0):
+    palettes = filtered_palettes
+    
+
 def convert_with_inkscape(file,res,out):
     #call inkscape from command line to export - this renders svgs slowly but accurately
     args = "inkscape " + file + " --export-area-page -w "+ str(res)+" -h "+ str(res)+" --export-filename=" + out
@@ -110,7 +120,7 @@ for pal in palettes.keys():
         print(" - Directory already exists.")
     
     for vectorfile in svgs:
-        if(len(sys.argv)>1):
+        if(len(sys.argv)>1+palette_count):
             if(vectorfile not in sys.argv):
                 continue #if files are specified as arguments, only export those files
         data = ""
