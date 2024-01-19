@@ -12,7 +12,7 @@ Yinglets are the creation of [Valsalia](https://www.valsalia.com/)
 ## Custom Colors
 The script `generate.py` is used to generate all the different colour palettes and file types and zip files, and by adding your own colours to the dictionary inside called `palette` and running it, you can export your own custom emote set. To run it you will need some version of Python and [Inkscape](https://inkscape.org/) but i thiiiiink thats it. hopefully. This script can also be modified to export emotes at any resolution you need.
 
-running it as `python generate.py palette1 palette2 ...` will only export specific palettes, and `python generate.py emote1.svg [emote2.svg ...` will only export specific emotes, these can be mixed and matched to export specific emotes in specific palettes eg `python generate.py yinglime ying_sit.svg`
+running it as `python generate.py palette1 palette2 ...` will only export specific palettes, and `python generate.py emote1.svg emote2.svg ...` will only export specific emotes, these can be mixed and matched to export specific emotes in specific palettes eg `python generate.py yinglime ying_sit.svg`
 
 the code is so bad but hopefully in a way thats understandable at least, lol
 
