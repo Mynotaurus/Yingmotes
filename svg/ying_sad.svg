@@ -17,8 +17,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs828">
-  </defs>
+     id="defs828" />
   <sodipodi:namedview
      id="namedview826"
      pagecolor="#ffffff"
@@ -40,7 +39,7 @@
   <g
      id="layer1"
      inkscape:label="Ying"
-     style="display:inline;"
+     style="display:inline"
      inkscape:groupmode="layer">
     <path
        style="display:none;fill:#123456;stroke:#123456;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:fill markers stroke;stop-color:#000000"
@@ -129,9 +128,9 @@
            inkscape:label="right nostril" />
         <path
            style="opacity:1;fill:none;fill-opacity:1;stroke:#65471b;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="m 132.4709,1346.7875 90.52178,-72.859 c 2.96986,3.4708 153.12577,113.8669 222.99268,101.561 65.37614,-11.5149 67.86163,77.7264 67.86163,77.7264"
+           d="m 132.4709,1346.7875 90.52178,-72.859 c 2.96986,3.4708 139.87868,74.1256 196.4985,110.3924"
            id="path2200"
-           sodipodi:nodetypes="ccsc"
+           sodipodi:nodetypes="ccc"
            inkscape:label="mouf" />
         <path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#65471b;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
