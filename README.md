@@ -11,6 +11,10 @@ Yinglets are the creation of [Valsalia](https://www.valsalia.com/)
 
 The wonderful [dragn emote set](https://github.com/chr-1x/dragn-emoji) was made by khr
 
+Neofoxes and Neocats are the creations of [Volpeon](https://volpeon.ink/emojis/)
+
+The :ms_robot: emoji is from the [Mutant Standard](https://mutant.tech/) emote set
+
 ## Custom Colors
 The script `generate.py` is used to generate all the different colour palettes and file types and zip files, and by adding your own colours to the dictionary inside called `palette` and running it, you can export your own custom emote set. To run it you will need some version of Python and [Inkscape](https://inkscape.org/) but i thiiiiink thats it. hopefully. This script can also be modified to export emotes at any resolution you need.
 
