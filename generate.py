@@ -4,14 +4,20 @@ import os
 import shutil
 import subprocess
 import sys
+from apng import APNG
+import json
 
-#first we get all the svgs
+#first load all svgs
 print("-- Finding SVGs...")
 basepath = "./svg/"
 svgs = []
 for entry in os.listdir(basepath):
     if(entry.endswith(".svg")):
         svgs.append(entry)
+
+#load animation data
+f = open('animations.json')
+anim_data = json.load(f)
 
 
 defaultcols = {
@@ -161,6 +167,21 @@ for pal in palettes.keys():
         for i in res:
             print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
             convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
+    
+    for i in res:
+        for anim_name in anim_data["anims"].keys(): 
+            print(" - Making animated image "+pal+"/png"+str(i)+"/"+anim_name.replace("ying",pal))
+            anim = anim_data["anims"][anim_name]
+            im = APNG()
+            for frame in anim.keys():
+                im.append_file("out/"+pal+"/png"+str(i)+"/"+frame.replace("ying",pal),delay=anim[frame])
+            im.save("out/"+pal+"/png"+str(i)+"/"+anim_name.replace("ying",pal))
+            
+        print(" - Deleting temp files for "+pal+" at "+str(i)+"px")
+        for temp_file in anim_data["temp_files"]: 
+            os.remove("out/"+pal+"/png"+str(i)+"/"+temp_file.replace("ying",pal))
+
+
     
     print("- Making zips for "+pal)
     for i in res:

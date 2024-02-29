@@ -1,0 +1,11 @@
+{"anims":{
+    "aying_bongos.png":{
+        "aying_bongos_frame1.png":150,
+        "aying_bongos_frame2.png":150
+    },
+    "aying_bongos_hyper.png":{
+        "aying_bongos_frame1.png":50,
+        "aying_bongos_frame2.png":50
+    }
+},
+"temp_files":["aying_bongos_frame1.png","aying_bongos_frame2.png"]}
