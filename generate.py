@@ -4,14 +4,20 @@ import os
 import shutil
 import subprocess
 import sys
+from apng import APNG
+import json
 
-#first we get all the svgs
+#first load all svgs
 print("-- Finding SVGs...")
 basepath = "./svg/"
 svgs = []
 for entry in os.listdir(basepath):
     if(entry.endswith(".svg")):
         svgs.append(entry)
+
+#load animation data
+f = open('animations.json')
+anim_data = json.load(f)
 
 
 defaultcols = {
@@ -84,7 +90,9 @@ palettes = { #this is where the palettes to export are defined
     #you can add your own palettes to this list
 }
 
-res = [128,720] #resolutions to export at!
+res = [128,720] # resolutions to export at!
+delete_temp_files = True # delete animation frames once finished with them
+
 
 filtered_palettes = {} #specifying palette names in the command line arguments will only export those palettes
 palette_count = 0
@@ -161,6 +169,28 @@ for pal in palettes.keys():
         for i in res:
             print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
             convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
+    
+    for i in res:
+        for anim_name in anim_data["anims"].keys(): 
+            anim = anim_data["anims"][anim_name]
+            all_frames = True
+            for frame in anim.keys():
+                if not os.path.exists("out/"+pal+"/png"+str(i)+"/"+frame.replace("ying",pal)):
+                   all_frames = False
+            if(all_frames):
+                print(" - Making animated image "+pal+"/png"+str(i)+"/"+anim_name.replace("ying",pal))
+                im = APNG()
+                for frame in anim.keys():
+                    im.append_file("out/"+pal+"/png"+str(i)+"/"+frame.replace("ying",pal),delay=anim[frame])
+                im.save("out/"+pal+"/png"+str(i)+"/"+anim_name.replace("ying",pal))
+            
+        if(delete_temp_files):
+            print(" - Deleting temp files for "+pal+" at "+str(i)+"px")
+            for temp_file in anim_data["temp_files"]: 
+                if os.path.exists("out/"+pal+"/png"+str(i)+"/"+temp_file.replace("ying",pal)):
+                    os.remove("out/"+pal+"/png"+str(i)+"/"+temp_file.replace("ying",pal))
+
+
     
     print("- Making zips for "+pal)
     for i in res:
