@@ -8,12 +8,23 @@
         "aying_bongos_frame2.png":50
     },
     "aying_laugh.png":{
-        "ying_laugh.png":120,
+        "ying_laugh.png":        120,
         "aying_laugh_frame2.png":120
+    },
+    "aying_dizzy.png":{
+        "ying_dizzy.png":        100,
+        "aying_dizzy_frame2.png":100,
+        "aying_dizzy_frame3.png":100
+    },
+    "aying_tail_twitch.png":{
+        "ying_tail_up.png":      500,
+        "ying_tail_down.png":     50
     }
 },
 "temp_files":[
     "aying_bongos_frame1.png",
     "aying_bongos_frame2.png",
-    "aying_laugh_frame2.png"
+    "aying_laugh_frame2.png",
+    "aying_dizzy_frame2.png",
+    "aying_dizzy_frame3.png"
 ]}
