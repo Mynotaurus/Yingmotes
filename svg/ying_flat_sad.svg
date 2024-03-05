@@ -28,8 +28,8 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.32026963"
-     inkscape:cx="791.52056"
-     inkscape:cy="941.39428"
+     inkscape:cx="669.74817"
+     inkscape:cy="941.39429"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -84,7 +84,7 @@
          id="g12997"
          inkscape:label="left eye"
          style="display:inline"
-         transform="rotate(-5.8092557,704.47743,2412.8027)">
+         transform="rotate(-5.8092557,827.55364,2406.558)">
         <path
            id="path1915-9"
            style="display:inline;fill:#fefefe;stroke:#65471b;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke;stop-color:#000000"
@@ -170,7 +170,7 @@
          id="g12993"
          inkscape:label="right eye"
          style="display:inline"
-         transform="rotate(-5.8092557,823.65855,2612.1137)">
+         transform="rotate(-5.8092557,1162.1181,2594.9407)">
         <path
            style="opacity:1;fill:#65471b;fill-opacity:1;stroke:#65471b;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
            d="m 661.97569,1226.0485 53.36716,-115.5008 86.53085,168.711 z"
