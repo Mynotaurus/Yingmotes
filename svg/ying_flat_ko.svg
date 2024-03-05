@@ -28,7 +28,7 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.45292965"
-     inkscape:cx="730.79782"
+     inkscape:cx="645.79566"
      inkscape:cy="992.42785"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
@@ -45,20 +45,6 @@
        id="g12988"
        inkscape:label="head"
        transform="rotate(5.8092557,-745.83591,2202.8207)">
-      <g
-         id="g4611-7"
-         inkscape:label="RIGHT EYE"
-         style="display:inline"
-         transform="rotate(-5.8092557,628.50205,6100.9191)">
-        <path
-           style="fill:#b7b7c8;stroke:#65471b;stroke-width:128;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="M 677.55409,1227.091 1123.6173,864.44211"
-           id="path1175-5" />
-        <path
-           style="fill:#b7b7c8;stroke:#65471b;stroke-width:128;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="M 734.81454,861.80682 1089.7068,1220.8463"
-           id="path4527-4" />
-      </g>
       <path
          style="fill:#ffcb4c;stroke:#ffcb4c;stroke-width:64.0001;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:172.8;paint-order:fill markers stroke;stop-color:#000000"
          d="m 944.93455,1347.7403 730.56905,-74.3277 -28.0221,-275.42983 c 0,0 -166.5692,34.72343 -239.9429,52.72623 4.2376,-18.6805 21.5214,-38.4874 47.0715,-59.00793 -98.174,4.1957 -188.1226,51.04623 -281.3142,81.07993"
@@ -88,6 +74,20 @@
          inkscape:label="eyelash left big"
          inkscape:transform-center-x="309.88345"
          inkscape:transform-center-y="-210.71201" />
+      <g
+         id="g4611-7"
+         inkscape:label="RIGHT EYE"
+         style="display:inline"
+         transform="rotate(-5.8092557,930.10983,6456.4372)">
+        <path
+           style="fill:#b7b7c8;stroke:#65471b;stroke-width:128;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
+           d="M 677.55409,1227.091 1123.6173,864.44211"
+           id="path1175-5" />
+        <path
+           style="fill:#b7b7c8;stroke:#65471b;stroke-width:128;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
+           d="M 734.81454,861.80682 1089.7068,1220.8463"
+           id="path4527-4" />
+      </g>
       <path
          style="opacity:1;fill:#f19020;fill-opacity:1;stroke:#f19020;stroke-width:64;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
          d="m 568.0612,962.26427 c 0,0 31.04128,-174.4986 115.92077,-336.32087 93.37587,-178.02057 257.08976,-339.21843 320.63703,-313.41655 63.5472,25.80186 77.4531,250.75689 42.7802,388.48437 -34.6729,137.7275 -198.01145,399.64228 -198.01145,399.64228 z"
