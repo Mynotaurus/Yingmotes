@@ -18,7 +18,15 @@
     ],
     "aying_tail_twitch.png":[
         ["ying_tail_up.png",      500],
-        ["ying_tail_down.png",     50]
+        ["ying_tail_down.png",     80],
+        ["ying_tail_up.png",       50],
+        ["ying_tail_down.png",     80],
+        ["ying_tail_up.png",      850],
+        ["ying_tail_down.png",     80],
+        ["ying_tail_up.png",       50],
+        ["ying_tail_down.png",     80],
+        ["ying_tail_up.png",       50],
+        ["ying_tail_down.png",     80]
     ],
     "aying_pet.png":[
         ["ying_pet.png",          400],
