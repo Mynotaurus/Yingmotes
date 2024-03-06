@@ -188,17 +188,17 @@ for pal in palettes.keys():
         for anim_name in anim_data["anims"].keys(): 
             anim = anim_data["anims"][anim_name]
             all_frames = True
-            for frame in anim.keys():
-                if not os.path.exists("out/"+pal+"/png"+str(i)+"/"+frame.replace("ying",pal)) and not os.path.exists("out/"+pal+"/temp"+str(i)+"/"+frame.replace("ying",pal).replace("temp/","")):
+            for frame in anim:
+                if not os.path.exists("out/"+pal+"/png"+str(i)+"/"+frame[0].replace("ying",pal)) and not os.path.exists("out/"+pal+"/temp"+str(i)+"/"+frame[0].replace("ying",pal).replace("temp/","")):
                    all_frames = False
             if(all_frames):
                 print(" - Making animated image "+pal+"/png"+str(i)+"/"+anim_name.replace("ying",pal))
                 im = APNG()
-                for frame in anim.keys():
-                    if os.path.exists("out/"+pal+"/temp"+str(i)+"/"+frame.replace("ying",pal).replace("temp/","")):
-                        im.append_file("out/"+pal+"/temp"+str(i)+"/"+frame.replace("ying",pal).replace("temp/",""),delay=anim[frame])
+                for frame in anim:
+                    if os.path.exists("out/"+pal+"/temp"+str(i)+"/"+frame[0].replace("ying",pal).replace("temp/","")):
+                        im.append_file("out/"+pal+"/temp"+str(i)+"/"+frame[0].replace("ying",pal).replace("temp/",""),delay=frame[1])
                     else:
-                       im.append_file("out/"+pal+"/png"+str(i)+"/"+frame.replace("ying",pal),delay=anim[frame])
+                       im.append_file("out/"+pal+"/png"+str(i)+"/"+frame[0].replace("ying",pal),delay=frame[1])
                 im.save("out/"+pal+"/png"+str(i)+"/"+anim_name.replace("ying",pal))
             
 
