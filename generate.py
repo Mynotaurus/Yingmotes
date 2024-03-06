@@ -122,17 +122,21 @@ except:
 for pal in palettes.keys():
     newcols = palettes[pal]
     #make all the folders!!
-    try:
-        print("- Making new directory for "+pal+"...")
-        os.mkdir("out/"+pal)
-        os.mkdir("out/"+pal+"/svg")
-        os.mkdir("out/"+pal+"/svg/temp")
-        for i in res:
+    print("- Making required directories for "+pal+"...")
+    for i in ["out/"+pal,"out/"+pal+"/svg","out/"+pal+"/svg/temp"]:
+        try:
+            os.mkdir(i)
+        except:
+            pass
+    for i in res:
+        try:
             os.mkdir("out/"+pal+"/png"+str(i))
+        except:
+            pass
+        try:
             os.mkdir("out/"+pal+"/temp"+str(i))
-    except:
-        print(" - Directory already exists.")
-    
+        except:
+            pass
     for vectorfile in svgs:
         if(len(sys.argv)>1+palette_count):
             if(vectorfile not in sys.argv):
