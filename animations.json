@@ -39,6 +39,10 @@
     "aying_headphones_200bpm.png":{
         "ying_headphones.png":          150,
         "aying_headphones_frame2.png":  100
+    },
+    "aying_lol.png":{
+        "ying_lol.png":        120,
+        "aying_lol_frame2.png":120
     }
 },
 "temp_files":[
@@ -49,5 +53,6 @@
     "aying_dizzy_frame3.png",
     "aying_pet_frame2.png",
     "aying_flat_pet_frame2.png",
-    "aying_headphones_frame2.png"
+    "aying_headphones_frame2.png",
+    "aying_lol_frame2.png"
 ]}
