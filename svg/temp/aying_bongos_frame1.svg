@@ -27,15 +27,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="0.45292965"
-     inkscape:cx="802.55288"
-     inkscape:cy="1155.8086"
+     inkscape:zoom="0.22646483"
+     inkscape:cx="812.48821"
+     inkscape:cy="894.1786"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g12997" />
   <g
      id="layer1"
      inkscape:label="Ying"
@@ -88,7 +88,7 @@
            sodipodi:nodetypes="sssss" />
         <path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#65471b;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="M 502.77494,940.42933 V 1110.4337"
+           d="M 478.61486,986.64072 V 1156.6451"
            id="path2372"
            inkscape:label="left pupil" />
       </g>
@@ -150,7 +150,7 @@
            sodipodi:nodetypes="sssss" />
         <path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#65471b;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="M 867.22012,941.12603 V 1131.0009"
+           d="m 820.47199,1003.3887 v 189.8749"
            id="path2350"
            inkscape:label="right pupil" />
       </g>
