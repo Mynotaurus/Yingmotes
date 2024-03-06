@@ -51,5 +51,17 @@
     "aying_lol.png":[
         ["ying_lol.png",        120],
         ["aying_lol_frame2.png",120]
+    ],
+    "aying_head_empty.png":[
+        ["ying_head_empty.png",         150],
+        ["aying_head_empty_frame2.png", 150],
+        ["aying_head_empty_frame3.png", 150],
+        ["aying_head_empty_frame4.png", 150]
+    ],
+    "aying_head_empty_blush.png":[
+        ["ying_head_empty_blush.png",         100],
+        ["aying_head_empty_blush_frame2.png", 100],
+        ["aying_head_empty_blush_frame3.png", 100],
+        ["aying_head_empty_blush_frame4.png", 100]
     ]
 }}
