@@ -178,7 +178,7 @@ for pal in palettes.keys():
 
         for i in res:
             if(vectorfile in temps):
-                print(" - Saving image "+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
+                print(" - Saving image "+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("temp/","")+"...")
                 convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))
             else:
                 print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
