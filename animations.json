@@ -63,5 +63,9 @@
         ["aying_head_empty_blush_frame2.png", 100],
         ["aying_head_empty_blush_frame3.png", 100],
         ["aying_head_empty_blush_frame4.png", 100]
+    ],
+    "aying_party.png":[
+        ["ying_party.png",         300],
+        ["aying_party_frame2.png", 300]
     ]
 }}
