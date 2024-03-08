@@ -67,5 +67,13 @@
     "aying_party.png":[
         ["ying_party.png",         300],
         ["aying_party_frame2.png", 300]
+    ],
+    "aying_lurk.png":[
+        ["ying_lurk.png",         500],
+        ["aying_lurk_blink.png",         120],
+        ["ying_lurk.png",         500],
+        ["aying_lurk_emerging.png", 80],
+        ["aying_lurk_hidden.png", 1200],
+        ["aying_lurk_emerging.png", 80]
     ]
 }}
