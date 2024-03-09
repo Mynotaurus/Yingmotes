@@ -36,8 +36,10 @@ defaultcols = {
     "tongue":"#ff5678",   #tongue colour (for all important bleps)
     "hair" : "#123456",   #hair colour, only shown when show_all = True
     "tail" : "#234567",   #tail colour, only shown when show_all = True
-    "show_all":False      #show_all shows all hidden layers, this renders both the hair and tail tuft
+    "show_all":False,      #show_all shows all hidden layers, this renders both the hair and tail tuft
     # to hide either hair or tail seperately, set its color to #0000, this makes it transparent (must be exactly #0000 to work)
+    "heart_inner":"#ff5555",
+    "heart_outer":"#b10020"
 }
 
 palettes = { #this is where the palettes to export are defined
@@ -64,7 +66,9 @@ palettes = { #this is where the palettes to export are defined
         "tongue":"#141",
         "hair":"#262",
         "tail":"#262",
-        "show_all":True
+        "show_all":True,
+        "heart_inner":"#0f0",
+        "heart_outer":"#131"
     },
 
     "myno" : {
@@ -77,7 +81,9 @@ palettes = { #this is where the palettes to export are defined
         "hair" : "#913fef",
         "tail" : "#913fef",
         "tongue":"#ff66aa",
-        "show_all":True
+        "show_all":True,
+        "heart_inner":"#fc037b",
+        "heart_outer":"#94017b"
     },
     
     "thio" : {
