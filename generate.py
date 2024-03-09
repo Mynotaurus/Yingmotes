@@ -63,7 +63,7 @@ palettes = { #this is where the palettes to export are defined
         "dark":"#3b4",
         "lid": "#474",
         "hand":"#474",
-        "tongue":"#141",
+        "tongue":"#498",
         "hair":"#262",
         "tail":"#262",
         "show_all":True,
