@@ -79,5 +79,13 @@
     "aying_noted.png":[
         ["ying_noted.png",         200],
         ["aying_noted_frame2.png", 200]
+    ],
+    "aying_nod.png":[
+        ["ying_happy.png",         200],
+        ["ying_look_up_happy.png", 200]
+    ],
+    "aying_shake.png":[
+        ["aying_shake_left.png",         200],
+        ["aying_shake_right.png", 200]
     ]
 }}
