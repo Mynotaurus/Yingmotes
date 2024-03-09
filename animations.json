@@ -75,5 +75,9 @@
         ["aying_lurk_emerging.png", 80],
         ["aying_lurk_hidden.png", 1200],
         ["aying_lurk_emerging.png", 80]
+    ],
+    "aying_noted.png":[
+        ["ying_noted.png",         200],
+        ["aying_noted_frame2.png", 200]
     ]
 }}
