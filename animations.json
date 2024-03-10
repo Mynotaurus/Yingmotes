@@ -32,6 +32,10 @@
         ["ying_pet.png",          400],
         ["aying_pet_frame2.png",  400]
     ],
+    "aying_scritch.png":[
+        ["ying_scritch.png",          300],
+        ["aying_scritch_frame2.png",  300]
+    ],
     "aying_flat_pet.png":[
         ["ying_flat_pet.png",400],
         ["aying_flat_pet_frame2.png",400]
