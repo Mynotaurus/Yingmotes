@@ -44,8 +44,16 @@
         ["ying_headphones.png",400],
         ["aying_headphones_frame2.png",100]
     ],
+    "aying_headphones_140bpm.png":[
+        ["ying_headphones.png",329],
+        ["aying_headphones_frame2.png",100]
+    ],
     "aying_headphones_160bpm.png":[
         ["ying_headphones.png",275],
+        ["aying_headphones_frame2.png",100]
+    ],
+    "aying_headphones_180bpm.png":[
+        ["ying_headphones.png",233],
         ["aying_headphones_frame2.png",100]
     ],
     "aying_headphones_200bpm.png":[
