@@ -53,8 +53,8 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.32026963"
-     inkscape:cx="772.78636"
-     inkscape:cy="872.70217"
+     inkscape:cx="832.11137"
+     inkscape:cy="651.01396"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -140,7 +140,7 @@
          id="path13483"
          style="display:inline;opacity:1;fill:#ffcb4c;stroke:#ffcb4c;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6.4, 6.4;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
          inkscape:label="right ear"
-         d="m 1675.5175,200.5866 c -75.8608,-23.71955 -313.876,200.3303 -365.6689,274.29393 -46.1136,65.8529 -174.8417,227.68892 -211.3747,273.53504 -172.43919,328.95993 28.3436,378.94273 122.8413,456.32933 127.5232,-83.271 373.6004,-265.61551 448.7176,-476.13712 102.8443,-288.22941 54.6787,-512.63954 5.4847,-528.02118 z"
+         d="m 1675.5175,200.5866 c -75.8608,-23.71955 -313.876,200.3303 -365.6689,274.29393 -46.1136,65.8529 -209.9475,272.04831 -246.4805,317.89443 -172.43917,328.95994 63.4494,334.58334 157.9471,411.96994 127.5232,-83.271 373.6004,-265.61551 448.7176,-476.13712 102.8443,-288.22941 54.6787,-512.63954 5.4847,-528.02118 z"
          sodipodi:nodetypes="ssccss"
          inkscape:transform-center-x="-179.32578"
          inkscape:transform-center-y="-293.41517" />
@@ -172,7 +172,7 @@
       </g>
       <path
          style="opacity:1;fill:none;fill-opacity:1;stroke:#ffcb4c;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-         d="M 589.06526,72.036885 C 708.6632,330.66645 770.41461,592.76356 719.98502,861.58522"
+         d="M 612.44915,85.297813 C 732.04709,343.92738 793.7985,606.02449 743.36891,874.84615"
          id="path6280"
          sodipodi:nodetypes="cc"
          inkscape:label="eyelash right big"
@@ -180,7 +180,7 @@
          inkscape:transform-center-y="-332.6352" />
       <path
          style="display:inline;fill:none;fill-opacity:1;stroke:#ffcb4c;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-         d="m 863.55826,301.93376 c 2.88779,172.38951 -21.80221,367.39203 -69.98003,520.76293"
+         d="m 890.70484,306.90552 c 2.88779,172.38951 -21.80221,367.39203 -69.98003,520.76293"
          id="path6280-0"
          sodipodi:nodetypes="cc"
          inkscape:label="eyelash right small"

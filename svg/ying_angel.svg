@@ -42,7 +42,7 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.32026963"
-     inkscape:cx="1262.9983"
+     inkscape:cx="1053.7996"
      inkscape:cy="1044.4325"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
@@ -136,14 +136,6 @@
            rx="654.62701"
            ry="214.16129" />
       </g>
-      <path
-         id="path13483"
-         style="display:inline;opacity:1;fill:#ffcb4c;stroke:#ffcb4c;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6.4, 6.4;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-         inkscape:label="right ear"
-         d="M 1062.5955,91.267999 C 989.55737,122.61949 954.61335,447.62481 963.41318,537.48968 c 7.83485,80.01048 15.39366,286.66163 17.48498,345.24621 83.11504,361.99691 268.10024,269.30131 390.21114,266.57421 42.6484,-146.21 110.8519,-444.79298 30.9046,-653.52816 C 1292.5565,209.99845 1109.959,70.937266 1062.5955,91.267999 Z"
-         sodipodi:nodetypes="ssccss"
-         inkscape:transform-center-x="25.537722"
-         inkscape:transform-center-y="-383.92116" />
       <g
          id="g13003"
          inkscape:label="face">
@@ -186,6 +178,14 @@
          inkscape:label="eyelash right small"
          inkscape:transform-center-x="130.7821"
          inkscape:transform-center-y="-205.78314" />
+      <path
+         id="path13483"
+         style="display:inline;fill:#ffcb4c;stroke:#ffcb4c;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6.4, 6.4;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
+         inkscape:label="right ear"
+         d="M 1098.1633,97.102149 C 1022.0977,120.15638 951.3096,439.27797 950.08445,529.56435 c -1.0908,80.38577 -16.50691,286.59968 -20.92855,345.05459 42.43778,368.98366 236.5655,297.38476 358.225,308.22286 58.6073,-140.5753 159.518,-429.7476 103.2238,-646.06428 C 1313.5312,240.61404 1147.4901,82.15199 1098.1633,97.102149 Z"
+         sodipodi:nodetypes="ssccss"
+         inkscape:transform-center-x="-118.52033"
+         inkscape:transform-center-y="-303.00983" />
       <g
          id="g12993"
          inkscape:label="right eye"

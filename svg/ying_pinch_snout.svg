@@ -7,7 +7,7 @@
    width="1706.6667"
    height="1706.6667"
    viewBox="0 0 1706.6667 1706.6667"
-   sodipodi:docname="ying_exasperated.svg"
+   sodipodi:docname="ying_pinch_snout.svg"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    inkscape:export-filename="D:\Pictures\yingmotes\ying_exasperated.png"
    inkscape:export-xdpi="72"
@@ -28,7 +28,7 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.32026963"
-     inkscape:cx="572.95473"
+     inkscape:cx="571.39355"
      inkscape:cy="922.66007"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
@@ -61,9 +61,10 @@
        inkscape:label="mane" />
     <path
        style="opacity:1;fill:#ffcb4c;fill-opacity:1;stroke:#ffcb4c;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-       d="m 866.19989,1343.3037 -64.7849,239.5079 62.82173,-25.5214 -51.04266,200.2443 459.38384,-15.7054 c 0,0 -127.6066,-94.2326 -149.2016,-184.5389 -21.5949,-90.3062 51.0427,-253.25 51.0427,-253.25 z"
+       d="m 866.19989,1343.3037 -64.7849,239.5079 62.82173,-25.5214 -51.04266,200.2443 459.38384,-15.7054 c 0,0 -127.6066,-94.2326 -149.2016,-184.5389 -21.5949,-90.3062 35.4309,-300.0855 35.4309,-300.0855 z"
        id="path3340"
-       inkscape:label="neck" />
+       inkscape:label="neck"
+       sodipodi:nodetypes="cccccscc" />
     <g
        id="g25848"
        transform="rotate(8.704993,2716.6722,2070.3588)"

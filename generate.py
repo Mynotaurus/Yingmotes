@@ -15,6 +15,12 @@ for entry in os.listdir(basepath):
     if(entry.endswith(".svg")):
         svgs.append(entry)
 
+temps = []
+for entry in os.listdir(basepath+"temp/"):
+    if(entry.endswith(".svg")):
+        svgs.append("temp/"+entry)
+        temps.append("temp/"+entry)
+
 #load animation data
 f = open('animations.json')
 anim_data = json.load(f)
@@ -30,8 +36,10 @@ defaultcols = {
     "tongue":"#ff5678",   #tongue colour (for all important bleps)
     "hair" : "#123456",   #hair colour, only shown when show_all = True
     "tail" : "#234567",   #tail colour, only shown when show_all = True
-    "show_all":False      #show_all shows all hidden layers, this renders both the hair and tail tuft
+    "show_all":False,      #show_all shows all hidden layers, this renders both the hair and tail tuft
     # to hide either hair or tail seperately, set its color to #0000, this makes it transparent (must be exactly #0000 to work)
+    "heart_inner":"#ff5555",
+    "heart_outer":"#b10020"
 }
 
 palettes = { #this is where the palettes to export are defined
@@ -55,10 +63,12 @@ palettes = { #this is where the palettes to export are defined
         "dark":"#3b4",
         "lid": "#474",
         "hand":"#474",
-        "tongue":"#141",
+        "tongue":"#498",
         "hair":"#262",
         "tail":"#262",
-        "show_all":True
+        "show_all":True,
+        "heart_inner":"#0f0",
+        "heart_outer":"#131"
     },
 
     "myno" : {
@@ -67,11 +77,13 @@ palettes = { #this is where the palettes to export are defined
         "line" : "#880056",
         "dark" : "#a99f8b",
         "lid" : "#a99f8b",
-        "hand" : "#a99f8b",
+        "hand" : "#998f7b",
         "hair" : "#913fef",
         "tail" : "#913fef",
         "tongue":"#ff66aa",
-        "show_all":True
+        "show_all":True,
+        "heart_inner":"#fc037b",
+        "heart_outer":"#94017b"
     },
     
     "thio" : {
@@ -91,8 +103,6 @@ palettes = { #this is where the palettes to export are defined
 }
 
 res = [128,720] # resolutions to export at!
-delete_temp_files = True # delete animation frames once finished with them
-
 
 filtered_palettes = {} #specifying palette names in the command line arguments will only export those palettes
 palette_count = 0
@@ -118,15 +128,21 @@ except:
 for pal in palettes.keys():
     newcols = palettes[pal]
     #make all the folders!!
-    try:
-        print("- Making new directory for "+pal+"...")
-        os.mkdir("out/"+pal)
-        os.mkdir("out/"+pal+"/svg")
-        for i in res:
+    print("- Making required directories for "+pal+"...")
+    for i in ["out/"+pal,"out/"+pal+"/svg","out/"+pal+"/svg/temp"]:
+        try:
+            os.mkdir(i)
+        except:
+            pass
+    for i in res:
+        try:
             os.mkdir("out/"+pal+"/png"+str(i))
-    except:
-        print(" - Directory already exists.")
-    
+        except:
+            pass
+        try:
+            os.mkdir("out/"+pal+"/temp"+str(i))
+        except:
+            pass
     for vectorfile in svgs:
         if(len(sys.argv)>1+palette_count):
             if(vectorfile not in sys.argv):
@@ -156,7 +172,7 @@ for pal in palettes.keys():
                 if(f.read()==data):
                     allpngs = True
                     for i in res:
-                        if(not os.path.exists("out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))):
+                        if(not os.path.exists("out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal)) and not os.path.exists("out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))):
                             allpngs = False
                     if(allpngs):
                         print(" - SVGs match and all PNGs exist. Skipping...")
@@ -167,28 +183,30 @@ for pal in palettes.keys():
             f.write(data)
 
         for i in res:
-            print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
-            convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
+            if(vectorfile in temps):
+                print(" - Saving image "+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("temp/","")+"...")
+                convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))
+            else:
+                print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
+                convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
     
     for i in res:
         for anim_name in anim_data["anims"].keys(): 
             anim = anim_data["anims"][anim_name]
             all_frames = True
-            for frame in anim.keys():
-                if not os.path.exists("out/"+pal+"/png"+str(i)+"/"+frame.replace("ying",pal)):
+            for frame in anim:
+                if not os.path.exists("out/"+pal+"/png"+str(i)+"/"+frame[0].replace("ying",pal)) and not os.path.exists("out/"+pal+"/temp"+str(i)+"/"+frame[0].replace("ying",pal).replace("temp/","")):
                    all_frames = False
             if(all_frames):
                 print(" - Making animated image "+pal+"/png"+str(i)+"/"+anim_name.replace("ying",pal))
                 im = APNG()
-                for frame in anim.keys():
-                    im.append_file("out/"+pal+"/png"+str(i)+"/"+frame.replace("ying",pal),delay=anim[frame])
+                for frame in anim:
+                    if os.path.exists("out/"+pal+"/temp"+str(i)+"/"+frame[0].replace("ying",pal).replace("temp/","")):
+                        im.append_file("out/"+pal+"/temp"+str(i)+"/"+frame[0].replace("ying",pal).replace("temp/",""),delay=frame[1])
+                    else:
+                       im.append_file("out/"+pal+"/png"+str(i)+"/"+frame[0].replace("ying",pal),delay=frame[1])
                 im.save("out/"+pal+"/png"+str(i)+"/"+anim_name.replace("ying",pal))
             
-        if(delete_temp_files):
-            print(" - Deleting temp files for "+pal+" at "+str(i)+"px")
-            for temp_file in anim_data["temp_files"]: 
-                if os.path.exists("out/"+pal+"/png"+str(i)+"/"+temp_file.replace("ying",pal)):
-                    os.remove("out/"+pal+"/png"+str(i)+"/"+temp_file.replace("ying",pal))
 
 
     

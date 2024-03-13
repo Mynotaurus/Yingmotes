@@ -27,15 +27,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="0.32026963"
-     inkscape:cx="702.53305"
-     inkscape:cy="794.64294"
+     inkscape:zoom="0.64053926"
+     inkscape:cx="672.08995"
+     inkscape:cy="1045.2131"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g12988" />
+     inkscape:current-layer="g13003" />
   <g
      id="layer1"
      inkscape:label="Ying"
@@ -130,10 +130,10 @@
            id="path2198"
            inkscape:label="right nostril" />
         <path
-           style="opacity:1;fill:#ffcb4c;fill-opacity:1;stroke:#65471b;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="m 132.4709,1346.7875 90.52178,-72.859 c 0,0 146.93476,106.6315 222.99268,101.561 28.81892,-1.9213 55.13003,-9.2761 75.6599,-16.9725 13.91355,-5.2161 25.17173,-10.589 32.75557,-14.5338 6.94474,-3.6124 10.80833,-6.0271 10.80833,-6.0271"
+           style="display:inline;fill:#ffcb4c;fill-opacity:1;stroke:#65471b;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
+           d="m 132.47086,1346.7875 90.52178,-72.859 c 0,0 123.5026,100.0607 216.76669,100.5603 93.26409,0.4996 134.75315,-71.3205 134.75315,-71.3205"
            id="path2200"
-           sodipodi:nodetypes="ccsssc"
+           sodipodi:nodetypes="cczc"
            inkscape:label="mouf" />
         <path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#65471b;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
@@ -230,12 +230,6 @@
            id="path20376"
            sodipodi:nodetypes="cscc" />
       </g>
-      <path
-         style="display:inline;fill:#ffcb4c;fill-opacity:1;stroke:#65471b;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-         d="m 331.63569,1280.8995 90.52178,-72.859 c 0,0 147.05667,108.2122 222.99268,101.561 165.63428,-14.5079 149.20951,-99.6499 149.20951,-99.6499"
-         id="path2200-6"
-         sodipodi:nodetypes="ccsc"
-         inkscape:label="mouf" />
     </g>
   </g>
 </svg>

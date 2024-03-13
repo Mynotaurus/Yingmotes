@@ -1,53 +1,134 @@
 {"anims":{
-    "aying_bongos.png":{
-        "aying_bongos_frame1.png":150,
-        "aying_bongos_frame2.png":150
-    },
-    "aying_bongos_hyper.png":{
-        "aying_bongos_frame1.png":50,
-        "aying_bongos_frame2.png":50
-    },
-    "aying_laugh.png":{
-        "ying_laugh.png":        120,
-        "aying_laugh_frame2.png":120
-    },
-    "aying_dizzy.png":{
-        "ying_dizzy.png":        100,
-        "aying_dizzy_frame2.png":100,
-        "aying_dizzy_frame3.png":100
-    },
-    "aying_tail_twitch.png":{
-        "ying_tail_up.png":      500,
-        "ying_tail_down.png":     50
-    },
-    "aying_pet.png":{
-        "ying_pet.png":          400,
-        "aying_pet_frame2.png":  400
-    },
-    "aying_flat_pet.png":{
-        "ying_flat_pet.png":          400,
-        "aying_flat_pet_frame2.png":  400
-    },
-    "aying_headphones_120bpm.png":{
-        "ying_headphones.png":          400,
-        "aying_headphones_frame2.png":  100
-    },
-    "aying_headphones_160bpm.png":{
-        "ying_headphones.png":          275,
-        "aying_headphones_frame2.png":  100
-    },
-    "aying_headphones_200bpm.png":{
-        "ying_headphones.png":          150,
-        "aying_headphones_frame2.png":  100
-    }
-},
-"temp_files":[
-    "aying_bongos_frame1.png",
-    "aying_bongos_frame2.png",
-    "aying_laugh_frame2.png",
-    "aying_dizzy_frame2.png",
-    "aying_dizzy_frame3.png",
-    "aying_pet_frame2.png",
-    "aying_flat_pet_frame2.png",
-    "aying_headphones_frame2.png"
-]}
+    "aying_bongos.png":[
+        ["aying_bongos_frame1.png",150],
+        ["aying_bongos_frame2.png",150]
+    ],
+    "aying_bongos_hyper.png":[
+        ["aying_bongos_frame1.png",50],
+        ["aying_bongos_frame2.png",50]
+    ],
+    "aying_laugh.png":[
+        ["ying_laugh.png"       ,120],
+        ["aying_laugh_frame2.png",120]
+    ],
+    "aying_dizzy.png":[
+        ["ying_dizzy.png"        ,100],
+        ["aying_dizzy_frame2.png",100],
+        ["aying_dizzy_frame3.png",100]
+    ],
+    "aying_tail_twitch.png":[
+        ["ying_tail_up.png",      500],
+        ["ying_tail_down.png",     80],
+        ["ying_tail_up.png",       50],
+        ["ying_tail_down.png",     80],
+        ["ying_tail_up.png",      850],
+        ["ying_tail_down.png",     80],
+        ["ying_tail_up.png",       50],
+        ["ying_tail_down.png",     80],
+        ["ying_tail_up.png",       50],
+        ["ying_tail_down.png",     80]
+    ],
+    "aying_pet.png":[
+        ["ying_pet.png",          400],
+        ["aying_pet_frame2.png",  400]
+    ],
+    "aying_scritch.png":[
+        ["ying_scritch.png",          300],
+        ["aying_scritch_frame2.png",  300]
+    ],
+    "aying_flat_pet.png":[
+        ["ying_flat_pet.png",400],
+        ["aying_flat_pet_frame2.png",400]
+    ],
+    "aying_headphones_120bpm.png":[
+        ["ying_headphones.png",400],
+        ["aying_headphones_frame2.png",100]
+    ],
+    "aying_headphones_140bpm.png":[
+        ["ying_headphones.png",329],
+        ["aying_headphones_frame2.png",100]
+    ],
+    "aying_headphones_160bpm.png":[
+        ["ying_headphones.png",275],
+        ["aying_headphones_frame2.png",100]
+    ],
+    "aying_headphones_180bpm.png":[
+        ["ying_headphones.png",233],
+        ["aying_headphones_frame2.png",100]
+    ],
+    "aying_headphones_200bpm.png":[
+        ["ying_headphones.png",150],
+        ["aying_headphones_frame2.png",100]
+    ],
+    "aying_lol.png":[
+        ["ying_lol.png",        120],
+        ["aying_lol_frame2.png",120]
+    ],
+    "aying_head_empty.png":[
+        ["ying_head_empty.png",         150],
+        ["aying_head_empty_frame2.png", 150],
+        ["aying_head_empty_frame3.png", 150],
+        ["aying_head_empty_frame4.png", 150]
+    ],
+    "aying_head_empty_blush.png":[
+        ["ying_head_empty_blush.png",         100],
+        ["aying_head_empty_blush_frame2.png", 100],
+        ["aying_head_empty_blush_frame3.png", 100],
+        ["aying_head_empty_blush_frame4.png", 100]
+    ],
+    "aying_party.png":[
+        ["ying_party.png",         300],
+        ["aying_party_frame2.png", 300]
+    ],
+    "aying_lurk.png":[
+        ["ying_lurk.png",         500],
+        ["aying_lurk_blink.png",         120],
+        ["ying_lurk.png",         700],
+        ["aying_lurk_emerging.png", 80],
+        ["aying_lurk_hidden.png", 1200],
+        ["aying_lurk_emerging.png", 80]
+    ],
+    "aying_noted.png":[
+        ["ying_noted.png",         200],
+        ["aying_noted_frame2.png", 200]
+    ],
+    "aying_nod.png":[
+        ["ying_happy.png",         200],
+        ["ying_look_up_happy.png", 200]
+    ],
+    "aying_shake.png":[
+        ["aying_shake_left.png",         200],
+        ["aying_shake_right.png", 200]
+    ],
+
+    "aying_whackamole1.png":[
+        ["ying_lurk_hole.png",         300],
+        ["aying_lurk_holeish.png", 40],
+        ["hole.png", 1500],
+        ["aying_lurk_holeish.png", 40]
+    ],
+    "aying_whackamole2.png":[
+        ["hole.png", 500],
+        ["aying_lurk_holeish.png", 40],
+        ["ying_lurk_hole.png",         300],
+        ["aying_lurk_holeish.png", 40],
+        ["hole.png", 1000]
+    ],
+    "aying_whackamole3.png":[
+        ["hole.png", 1200],
+        ["aying_lurk_holeish.png", 40],
+        ["ying_lurk_hole.png",         300],
+        ["aying_lurk_holeish.png", 40],
+        ["hole.png", 300]
+    ],
+    "aying_peek.png":[
+        ["ying_peek.png",         600],
+        ["ying_peek_blep.png",    300],
+        ["ying_peek.png",         200],
+        ["aying_peek_frame2.png", 80],
+        ["aying_peek_frame3.png", 80],
+        ["aying_peek_frame4.png", 2000],
+        ["aying_peek_frame3.png", 80],
+        ["aying_peek_frame2.png", 80]
+    ]
+}}
