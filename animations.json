@@ -91,5 +91,26 @@
     "aying_shake.png":[
         ["aying_shake_left.png",         200],
         ["aying_shake_right.png", 200]
+    ],
+
+    "aying_whackamole1.png":[
+        ["ying_lurk_hole.png",         300],
+        ["aying_lurk_holeish.png", 40],
+        ["hole.png", 1500],
+        ["aying_lurk_holeish.png", 40]
+    ],
+    "aying_whackamole2.png":[
+        ["hole.png", 500],
+        ["aying_lurk_holeish.png", 40],
+        ["ying_lurk_hole.png",         300],
+        ["aying_lurk_holeish.png", 40],
+        ["hole.png", 1000]
+    ],
+    "aying_whackamole3.png":[
+        ["hole.png", 1200],
+        ["aying_lurk_holeish.png", 40],
+        ["ying_lurk_hole.png",         300],
+        ["aying_lurk_holeish.png", 40],
+        ["hole.png", 300]
     ]
 }}

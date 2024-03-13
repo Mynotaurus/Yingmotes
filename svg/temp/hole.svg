@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg824"
+   width="1706.6667"
+   height="1706.6667"
+   viewBox="0 0 1706.6667 1706.6667"
+   sodipodi:docname="hole.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:export-filename="D:\Pictures\yingmotes\ying_lurk.png"
+   inkscape:export-xdpi="72"
+   inkscape:export-ydpi="72"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs828">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath931">
+      <path
+         id="path933"
+         style="display:inline;opacity:1;fill:#333333;stroke:#000000;stroke-width:96.0002;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke;stop-color:#000000"
+         d="m 1188.7418,437.35303 c 36.629,34.78527 18.6361,124.08293 -50.0204,248.24856 C 1070.0651,809.76721 956.36905,958.62966 822.64526,1099.441 688.92148,1240.2523 546.1239,1361.478 425.66627,1436.4497 305.2087,1511.4215 216.95836,1533.998 180.32943,1499.2127 143.70042,1464.4275 23.195936,1765.8176 -79.140485,1667.5423 -283.86597,1470.9408 -1024.075,1014.2478 -1006.6953,694.90406 c 16.16237,-296.97458 757.1637,-809.2597 795.3571,-1063.9806 54.23567,-361.71064 878.88296,-694.20516 1559.6519,470.02832 71.6189,122.48076 -196.2007,301.6159 -159.5719,336.40125 z"
+         sodipodi:nodetypes="ssssssssss" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview826"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.32026963"
+     inkscape:cx="487.08958"
+     inkscape:cy="1047.5548"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <g
+     id="layer1"
+     inkscape:label="Ying"
+     style="display:inline"
+     inkscape:groupmode="layer">
+    <ellipse
+       style="display:inline;fill:#333333;stroke:#000000;stroke-width:192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill;stop-color:#000000"
+       id="path866"
+       cx="856.45746"
+       cy="1305.1504"
+       rx="732.19556"
+       ry="190.46452" />
+  </g>
+</svg>
