@@ -120,5 +120,15 @@
         ["ying_lurk_hole.png",         300],
         ["aying_lurk_holeish.png", 40],
         ["hole.png", 300]
+    ],
+    "aying_peek.png":[
+        ["ying_peek.png",         600],
+        ["ying_peek_blep.png",    300],
+        ["ying_peek.png",         200],
+        ["aying_peek_frame2.png", 80],
+        ["aying_peek_frame3.png", 80],
+        ["aying_peek_frame4.png", 2000],
+        ["aying_peek_frame3.png", 80],
+        ["aying_peek_frame2.png", 80]
     ]
 }}
