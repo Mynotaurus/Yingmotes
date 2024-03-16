@@ -6,6 +6,7 @@ import subprocess
 import sys
 from apng import APNG
 import json
+from PIL import Image
 
 #first load all svgs
 print("-- Finding SVGs...")
@@ -103,6 +104,7 @@ palettes = { #this is where the palettes to export are defined
 }
 
 res = [128,720] # resolutions to export at!
+reverse = False # if true, generate flipped versions as well as the normal emotes
 
 filtered_palettes = {} #specifying palette names in the command line arguments will only export those palettes
 palette_count = 0
@@ -143,6 +145,22 @@ for pal in palettes.keys():
             os.mkdir("out/"+pal+"/temp"+str(i))
         except:
             pass
+
+    if reverse: #make reversed directories too if we need them
+        try:
+            os.mkdir("out/"+pal+"/reversed/")
+        except:
+            pass
+        for i in res:
+            try:
+                os.mkdir("out/"+pal+"/reversed/png"+str(i))
+            except:
+                pass
+            try:
+                os.mkdir("out/"+pal+"/reversed/temp"+str(i))
+            except:
+                pass
+    
     for vectorfile in svgs:
         if(len(sys.argv)>1+palette_count):
             if(vectorfile not in sys.argv):
@@ -167,14 +185,17 @@ for pal in palettes.keys():
                     data = data.replace("display:none;","display:inline;")
     
         #check if files are already exported and if so, skip them
+        allpngs = True
+        allreversed = True
         if(os.path.exists("out/"+pal+"/svg/"+vectorfile.replace("ying",pal))):
             with open("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), 'r') as f:
                 if(f.read()==data):
-                    allpngs = True
                     for i in res:
                         if(not os.path.exists("out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal)) and not os.path.exists("out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))):
                             allpngs = False
-                    if(allpngs):
+                        if(reverse and not os.path.exists("out/"+pal+"/reversed/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying","rev"+pal)) and not os.path.exists("out/"+pal+"/reversed/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying","rev"+pal).replace("temp/",""))):
+                            allreversed = False
+                    if(allpngs and allreversed):
                         print(" - SVGs match and all PNGs exist. Skipping...")
                         continue
         
@@ -183,12 +204,25 @@ for pal in palettes.keys():
             f.write(data)
 
         for i in res:
-            if(vectorfile in temps):
-                print(" - Saving image "+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("temp/","")+"...")
-                convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))
-            else:
-                print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
-                convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
+            if not allpngs:
+                if(vectorfile in temps):
+                    print(" - Saving image "+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("temp/","")+"...")
+                    convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))
+                    
+                else:
+                    print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
+                    convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
+
+            if reverse and not allreversed:
+                if(vectorfile in temps):
+                    print("  - Reversing "+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/","")+"...")
+                    img = Image.open("out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))
+                    img.transpose(Image.Transpose.FLIP_LEFT_RIGHT).save("out/"+pal+"/reversed/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying","rev"+pal).replace("temp/",""))
+                else:
+                    print("  - Reversing "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
+                    img = Image.open("out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
+                    img.transpose(Image.Transpose.FLIP_LEFT_RIGHT).save("out/"+pal+"/reversed/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying","rev"+pal))
+
     
     for i in res:
         for anim_name in anim_data["anims"].keys(): 
@@ -206,11 +240,26 @@ for pal in palettes.keys():
                     else:
                        im.append_file("out/"+pal+"/png"+str(i)+"/"+frame[0].replace("ying",pal),delay=frame[1])
                 im.save("out/"+pal+"/png"+str(i)+"/"+anim_name.replace("ying",pal))
-            
+
+            if reverse: #do it again for reversed images if needed!
+                for frame in anim:
+                    if not os.path.exists("out/"+pal+"/reversed/png"+str(i)+"/"+frame[0].replace("ying","rev"+pal)) and not os.path.exists("out/"+pal+"/reversed/temp"+str(i)+"/"+frame[0].replace("ying","rev"+pal).replace("temp/","")):
+                        all_frames = False
+                if(all_frames):
+                    print(" - Making animated image "+pal+"/reversed/png"+str(i)+"/"+anim_name.replace("ying","rev"+pal))
+                    im = APNG()
+                    for frame in anim:
+                        if os.path.exists("out/"+pal+"/reversed/temp"+str(i)+"/"+frame[0].replace("ying","rev"+pal).replace("temp/","")):
+                            im.append_file("out/"+pal+"/reversed/temp"+str(i)+"/"+frame[0].replace("ying","rev"+pal).replace("temp/",""),delay=frame[1])
+                        else:
+                            im.append_file("out/"+pal+"/reversed/png"+str(i)+"/"+frame[0].replace("ying","rev"+pal),delay=frame[1])
+                    im.save("out/"+pal+"/reversed/png"+str(i)+"/"+anim_name.replace("ying","rev"+pal))
 
 
     
     print("- Making zips for "+pal)
     for i in res:
         shutil.make_archive("out/Yingmotes_"+pal+"@"+str(i)+"px", 'zip', "out/"+pal+"/png"+str(i))
+        if reverse: 
+            shutil.make_archive("out/Reversed_Yingmotes_"+pal+"@"+str(i)+"px", 'zip', "out/"+pal+"/reversed/png"+str(i))
 
