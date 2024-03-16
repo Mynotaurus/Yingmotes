@@ -8,6 +8,7 @@ from apng import APNG
 import json
 from PIL import Image
 import tarfile
+from zipfile import ZipFile
 
 #first load all svgs
 print("-- Finding SVGs...")
@@ -47,7 +48,7 @@ defaultcols = {
 # =========== user changeable things!!! ==================
 
 res = [128,720] # resolutions to export at!
-reverse = False # if true, generate flipped versions as well as the normal emotes
+reverse = True # if true, generate flipped versions as well as the normal emotes
 
 palettes = { #this is where the palettes to export are defined
     "ying" : {
@@ -261,36 +262,39 @@ for pal in palettes.keys():
                     im.save("out/"+pal+"/reversed/png"+str(i)+"/"+anim_name.replace("ying","rev"+pal))
 
 
-    try:
-        print("- Making export directory...")
-        os.mkdir("export")
-    except:
-        print(" - Export directory already exists.")
+    for i in ["export","export/tarballs"]:
+        try:
+            os.mkdir(i)
+        except:
+            pass
     for i in res:
         try:
-            print("- Making export directory...")
             os.mkdir("export/zips@"+str(i)+"px")
         except:
-            print(" - Export directory already exists.")
-    try:
-        print("- Making export directory...")
-        os.mkdir("export/tarballs")
-    except:
-        print(" - Export directory already exists.")
-    for i in res:
+            pass
         print("- Making zips for "+pal+"@"+str(i)+"px...")
         shutil.make_archive("export/zips@"+str(i)+"px/Yingmotes_"+pal+"@"+str(i)+"px", 'zip', "out/"+pal+"/png"+str(i))
         if reverse: 
             shutil.make_archive("export/zips@"+str(i)+"px/Reversed_Yingmotes_"+pal+"@"+str(i)+"px", 'zip', "out/"+pal+"/reversed/png"+str(i))
         if i==128:
             print("- Making tarballs for "+pal+"@"+str(i)+"px...")
-            with tarfile.open("export/tarballs/Mastodon_Yingmotes_"+pal+"@"+str(i)+"px"+".tar.gz", "w:gz", format=tarfile.GNU_FORMAT) as tar:
+            with tarfile.open("export/tarballs/Yingmotes_"+pal+"@"+str(i)+"px"+".tar.gz", "w:gz", format=tarfile.GNU_FORMAT) as tar:
                     tar.add("out/"+pal+"/png"+str(i)+"/", arcname="")
             if reverse: 
-                with tarfile.open("export/tarballs/Mastodon_Reversed_Yingmotes_"+pal+"@"+str(i)+"px"+".tar.gz", "w:gz", format=tarfile.GNU_FORMAT) as tar:
+                with tarfile.open("export/tarballs/Reversed_Yingmotes_"+pal+"@"+str(i)+"px"+".tar.gz", "w:gz", format=tarfile.GNU_FORMAT) as tar:
                     tar.add("out/"+pal+"/png"+str(i)+"/", arcname="")
 
-print("- Making final export zips...")
-for i in res:
-    shutil.make_archive("export/zips@"+str(i)+"px", 'zip', "export/zips@"+str(i)+"px")
-shutil.make_archive("export/tarballs", 'zip', "export/tarballs")
+if(len(sys.argv)==1): #if youre exporting the whole set, include zips
+    print("- Making final export zips...")
+    for i in res:
+        with ZipFile("export/yingmotes@"+str(i)+"px.zip","w") as zip:
+            for pal in palettes.keys():
+                for file in os.listdir("out/"+pal+"/png"+str(i)+"/"):
+                    zip.write("out/"+pal+"/png"+str(i)+"/"+file, arcname=pal+"/"+file)
+    shutil.make_archive("export/yingmotes_tarballs", 'zip', "export/tarballs")
+    if reverse: 
+        for i in res:
+            with ZipFile("export/yingmotes_reversed@"+str(i)+"px.zip","w") as zip:
+                for pal in palettes.keys():
+                        for file in os.listdir("out/"+pal+"/reversed/png"+str(i)+"/"):
+                            zip.write("out/"+pal+"/reversed/png"+str(i)+"/"+file, arcname=pal+"/"+file)
