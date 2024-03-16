@@ -92,15 +92,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="0.32026964"
-     inkscape:cx="192.02569"
-     inkscape:cy="1372.2812"
+     inkscape:zoom="0.22646483"
+     inkscape:cx="682.22513"
+     inkscape:cy="927.29629"
      inkscape:window-width="1353"
-     inkscape:window-height="991"
-     inkscape:window-x="549"
-     inkscape:window-y="0"
+     inkscape:window-height="988"
+     inkscape:window-x="336"
+     inkscape:window-y="8"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g1486" />
+     inkscape:current-layer="g12988" />
   <g
      id="layer1"
      inkscape:label="Ying"
@@ -111,6 +111,10 @@
        inkscape:label="head"
        transform="rotate(23.970572,348.84182,1442.8374)"
        inkscape:groupmode="layer">
+      <path
+         id="path1330"
+         style="display:inline;fill:#ffffff;stroke:none;stroke-width:128;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke;stop-color:#000000"
+         d="m -492.26953,1115.6289 c 67.35417,268.3861 134.70833,536.7721 202.0625,805.1582 C 465.26302,1731.2025 1220.7331,1541.6178 1976.2031,1352.0332 1908.849,1083.6465 1841.4948,815.25977 1774.1406,546.87305 1018.6706,736.45833 263.20052,926.04362 -492.26953,1115.6289 Z" />
       <g
          id="g1057"
          inkscape:label="ying"

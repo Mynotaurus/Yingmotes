@@ -92,15 +92,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="0.11323242"
-     inkscape:cx="927.29629"
-     inkscape:cy="993.53174"
-     inkscape:window-width="1132"
-     inkscape:window-height="991"
-     inkscape:window-x="778"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="g2098" />
+     inkscape:zoom="0.22646484"
+     inkscape:cx="653.52308"
+     inkscape:cy="618.19751"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g12988" />
   <g
      id="layer1"
      inkscape:label="Ying"
@@ -111,6 +111,10 @@
        inkscape:label="head"
        transform="rotate(23.970572,348.84182,1442.8374)"
        inkscape:groupmode="layer">
+      <path
+         style="display:inline;fill:#ffffff;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
+         d="M -233.10837,1037.9837 1599.065,565.82751 1787.2797,1338.4716 -1.2584507,1948.4125 Z"
+         id="path2066" />
       <g
          id="g1057"
          inkscape:label="ying"
@@ -268,7 +272,7 @@
            d="m -1578.7199,37.585569 810.31006,-360.223449 84.94902,190.23829 -810.31008,360.22346 z" />
         <path
            id="path1888"
-           style="fill:#d62900;fill-opacity:1;stroke:#000000;stroke-width:12.5374;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0;paint-order:fill markers stroke;stop-color:#000000"
+           style="fill:#d62900;fill-opacity:1;stroke:#d62900;stroke-width:12.5374;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
            d="m -1663.6689,-152.65268 810.31006,-360.22349 84.949,190.23829 -810.31026,360.223438 z" />
       </g>
       <g

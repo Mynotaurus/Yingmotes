@@ -99,14 +99,14 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.22646483"
-     inkscape:cx="691.05652"
-     inkscape:cy="1238.6029"
+     inkscape:cx="691.05653"
+     inkscape:cy="1218.7323"
      inkscape:window-width="1353"
      inkscape:window-height="991"
-     inkscape:window-x="557"
+     inkscape:window-x="549"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g2098" />
+     inkscape:current-layer="g12988" />
   <g
      id="layer1"
      inkscape:label="Ying"
@@ -117,6 +117,10 @@
        inkscape:label="head"
        transform="rotate(23.970572,348.84182,1442.8374)"
        inkscape:groupmode="layer">
+      <path
+         style="display:inline;fill:#ffffff;stroke:none;stroke-width:128;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke;stop-color:#000000"
+         d="M -233.10837,1037.9837 1599.065,565.82751 1787.2797,1338.4716 -1.2584507,1948.4125 -233.10837,1037.9837"
+         id="path902" />
       <g
          id="g1057"
          inkscape:label="ying"

@@ -93,14 +93,14 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.32026964"
-     inkscape:cx="1031.943"
+     inkscape:cx="1033.5041"
      inkscape:cy="869.57977"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g12988" />
+     inkscape:current-layer="g2098" />
   <g
      id="layer1"
      inkscape:label="Ying"
@@ -249,16 +249,6 @@
          id="g2098"
          transform="matrix(1.907692,-0.16163818,-0.64980835,0.88261035,2893.7396,880.56194)"
          style="stroke-width:0.795885">
-        <path
-           style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:15.4752;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           id="rect15021"
-           width="886.75287"
-           height="1067.8502"
-           x="-1462.4259"
-           y="-816.38831"
-           transform="rotate(-23.970572)"
-           sodipodi:type="rect"
-           d="m -1462.4259,-816.38831 h 886.75287 V 251.46191 h -886.75287 z" />
         <path
            id="path1596"
            style="fill:#aa00d4;fill-opacity:1;stroke:#aa00d4;stroke-width:12.7341;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
