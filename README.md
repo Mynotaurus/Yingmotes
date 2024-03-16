@@ -1,7 +1,8 @@
 # Yingmotes
 A customisable yinglet emote pack!
 
-![ying](https://github.com/mothdotmonster/yingmotes/assets/82258270/c9da2fd7-b618-4042-9483-1b8f296b2cba) ![yinglemon](https://github.com/mothdotmonster/yingmotes/assets/82258270/6c95a275-0123-428c-9058-81a30029bdd2) ![yinglime](https://github.com/mothdotmonster/yingmotes/assets/82258270/0298eddb-fd49-4db1-ad21-3a68b436467e) ![myno](https://github.com/mothdotmonster/yingmotes/assets/82258270/5495b5c7-f61c-4520-b2b1-75072be857c2) ![thio](https://github.com/mothdotmonster/yingmotes/assets/82258270/7664302d-a194-491e-a74a-ce23e44e068e)
+![ying](https://github.com/Mynotaurus/Yingmotes/assets/46263022/5b599ff6-df27-4fc4-9fa8-b640258e48e1) ![yinglemon_nom_clam](https://github.com/Mynotaurus/Yingmotes/assets/46263022/16aa4413-5f39-489a-98fb-dc655d87a53d) ![yinglime_comfy_mug](https://github.com/Mynotaurus/Yingmotes/assets/46263022/dece219b-99c1-4f07-8e90-2d8eca13cbc6) ![myno_aww](https://github.com/Mynotaurus/Yingmotes/assets/46263022/3c94f6cd-22f9-4e09-9371-2e7a5a384139) ![thio_laugh](https://github.com/Mynotaurus/Yingmotes/assets/46263022/2f8c55ea-5e85-4a0d-a714-43d5d253d5e7)
+
 
 The repo only has svgs for the ying color scheme, but all color schemes have zipped pngs in the [Releases](https://github.com/Mynotaurus/Yingmotes/releases) section. You can get svgs for any color scheme by running `generate.py`.
 
