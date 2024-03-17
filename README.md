@@ -17,13 +17,13 @@ Neofoxes and Neocats are the creations of [Volpeon](https://volpeon.ink/emojis/)
 The :ms_robot: emoji is from the [Mutant Standard](https://mutant.tech/) emote set
 
 ## Custom Colors
-The script `generate.py` is used to generate all the different colour palettes and file types and zip files, and by adding your own colours to the dictionary inside called `palette` and running it, you can export your own custom emote set. To run it you will need some version of Python, [Inkscape](https://inkscape.org/) and the libraries in `requirements.txt` but i thiiiiink thats it. hopefully.
+The script `generate.py` is used to generate all the different colour palettes and file types and zip files, and by running it, you can export your own custom emote set. To run it you will need some version of Python, [Inkscape](https://inkscape.org/) and the libraries in `requirements.txt` but i thiiiiink thats it. hopefully.
 
 running it as `python generate.py palette1 palette2 ...` will only export specific palettes, and `python generate.py emote1.svg emote2.svg ...` will only export specific emotes, these can be mixed and matched to export specific emotes in specific palettes eg `python generate.py yinglime ying_sit.svg`
 
-Changing the array `res` allows you to set any number of custom export resolutions you may need.
-Setting the variable `reverse` to True will generate flipped versions of each emote as well, stored in a seperate /reversed/ folder for each palette.
+To add custom palettes, add the colors you want to `config.toml`, following the other `palette.name` tables as an example.  If you want hair and a tailpoof, set `show_all` to `true` in your palette. To hide any layer (ie if you want hair and no tailpoof), you can set its color to `#0000` to hide it completely.
 
-the code is so bad but hopefully in a way thats understandable at least, lol
+Changing the array `res` allows you to set any number of custom export resolutions you may need. The defaults are 128x128px and 720x720px.
+Setting the variable `reverse` to `true` will generate flipped versions of each emote as well, stored in a seperate /reversed/ folder for each palette.
 ## License
 These are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International https://creativecommons.org/licenses/by-nc-sa/4.0/

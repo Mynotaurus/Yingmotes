@@ -1,13 +1,8 @@
 #!/usr/bin/env python
 
-import os
-import shutil
-import subprocess
-import sys
+import os, shutil, subprocess, sys, json, tarfile, toml
 from apng import APNG
-import json
 from PIL import Image
-import tarfile
 from zipfile import ZipFile
 
 #first load all svgs
@@ -45,72 +40,11 @@ defaultcols = {
     "heart_outer":"#b10020"
 }
 
-# =========== user changeable things!!! ==================
-
-res = [128,720] # resolutions to export at!
-reverse = True # if true, generate flipped versions as well as the normal emotes
-
-palettes = { #this is where the palettes to export are defined
-    "ying" : {
-        #nothing is changed!
-    },
-
-    "yinglemon" : {
-        "main" : "#ffff00", 
-        "line" : "#6a6a1c", 
-        "dark" : "#cccc00", 
-        "lid"  : "#808000", 
-        "hand" : "#aaaa00",
-        "tongue":"#d40000"  
-    },
-
-    "yinglime" : {
-        "main":"#9f8",
-        "eye":"#cff",
-        "line":"#131",
-        "dark":"#3b4",
-        "lid": "#474",
-        "hand":"#474",
-        "tongue":"#498",
-        "hair":"#262",
-        "tail":"#262",
-        "show_all":True,
-        "heart_inner":"#0f0",
-        "heart_outer":"#131"
-    },
-
-    "myno" : {
-        "main":"#e4d9b9",
-        "eye" : "#cdebfd",
-        "line" : "#880056",
-        "dark" : "#a99f8b",
-        "lid" : "#a99f8b",
-        "hand" : "#998f7b",
-        "hair" : "#913fef",
-        "tail" : "#913fef",
-        "tongue":"#ff66aa",
-        "show_all":True,
-        "heart_inner":"#fc037b",
-        "heart_outer":"#94017b"
-    },
-    
-    "thio" : {
-        "main":"#b79879",
-        "eye" : "#6574c1",
-        "line" : "#3a332d",
-        "dark" : "#b58765",
-        "lid" : "#ddcdbd",
-        "hand" : "#3a332d",
-        "hair" : "#6dadfb",
-        "tongue":"#953036",
-        "tail":"#ddcdbd",
-        "show_all":True
-    }
-
-    #you can add your own palettes to this list
-}
-
-# =========== end of user changeable things ==================
+config = toml.load("config.toml") #load config file
+# put config vars in place
+res = config["res"]
+reverse = config["reverse"]
+palettes = config["palette"]
 
 filtered_palettes = {} #specifying palette names in the command line arguments will only export those palettes
 palette_count = 0
@@ -236,7 +170,7 @@ for pal in palettes.keys():
             all_frames = True
             for frame in anim:
                 if not os.path.exists("out/"+pal+"/png"+str(i)+"/"+frame[0].replace("ying",pal)) and not os.path.exists("out/"+pal+"/temp"+str(i)+"/"+frame[0].replace("ying",pal).replace("temp/","")):
-                   all_frames = False
+                    all_frames = False
             if(all_frames):
                 print(" - Making animated image "+pal+"/png"+str(i)+"/"+anim_name.replace("ying",pal))
                 im = APNG()
@@ -244,7 +178,7 @@ for pal in palettes.keys():
                     if os.path.exists("out/"+pal+"/temp"+str(i)+"/"+frame[0].replace("ying",pal).replace("temp/","")):
                         im.append_file("out/"+pal+"/temp"+str(i)+"/"+frame[0].replace("ying",pal).replace("temp/",""),delay=frame[1])
                     else:
-                       im.append_file("out/"+pal+"/png"+str(i)+"/"+frame[0].replace("ying",pal),delay=frame[1])
+                        im.append_file("out/"+pal+"/png"+str(i)+"/"+frame[0].replace("ying",pal),delay=frame[1])
                 im.save("out/"+pal+"/png"+str(i)+"/"+anim_name.replace("ying",pal))
 
             if reverse: #do it again for reversed images if needed!
