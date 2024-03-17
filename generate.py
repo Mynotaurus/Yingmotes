@@ -1,15 +1,9 @@
 #!/usr/bin/env python
 
-import os
-import shutil
-import subprocess
-import sys
+import os, shutil, subprocess, sys, json, tarfile, tomllib
 from apng import APNG
-import json
 from PIL import Image
-import tarfile
 from zipfile import ZipFile
-import tomllib
 
 #first load all svgs
 print("-- Finding SVGs...")
