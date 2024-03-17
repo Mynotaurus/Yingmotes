@@ -111,15 +111,37 @@ for pal in palettes.keys():
         with open("svg/"+vectorfile, 'r') as f:
             data = f.read()
             for key in newcols.keys():
-                if(newcols[key]=="#0000"):
-                    #if any color is set to #0000, set its opacity to zero
-                    #(yes i could implement partial transparency relatively trivially but im eepy so this will do for now)
-                    data = data.replace(defaultcols[key]+";fill-opacity:1","PLACEHOLDER_"+key+";fill-opacity:0")
                 if(key!="show_all"):
+                    if(len(newcols[key])==5 or len(newcols[key])==9): #check if in a #rgba or #rrggbbaa format
+                        new_opacity = 1
+                        if(len(newcols[key])==5):
+                            new_opacity = int(newcols[key][4],16)/15
+                        else:
+                            new_opacity = int(newcols[key][7:9],16)/255
+                        datalined = data.split("\n")
+                        for line in range(len(datalined)): #loop through lines of text
+                            if ("fill:"+defaultcols[key] in datalined[line]) and ("stroke:"+defaultcols[key] in datalined[line]): #both fill and stroke?
+                                print(datalined[line])
+                                if ";opacity:1;" in datalined[line]: #look for previously set opacity
+                                    datalined[line] = datalined[line].replace(";opacity:1",";opacity:"+str(new_opacity))
+                                else:
+                                    datalined[line] = datalined[line].replace('style="', 'style="opacity:'+str(new_opacity)+';')
+                            elif "fill:"+defaultcols[key] in datalined[line]: #if fill, only change fill opacity
+                                if "fill-opacity:1;" in datalined[line]: #look for previously set opacity
+                                    datalined[line] = datalined[line].replace("fill-opacity:1","fill-opacity:"+str(new_opacity))
+                                else:
+                                    datalined[line] = datalined[line].replace('style="', 'style="fill-opacity:'+str(new_opacity)+';')
+                        
+                        data = "\n".join(datalined) # recombine lines
                     data = data.replace(defaultcols[key],"PLACEHOLDER_"+key)
             for key in newcols.keys():
                 if(key!="show_all"):
-                    data = data.replace("PLACEHOLDER_"+key,newcols[key])
+                    new_color = newcols[key]
+                    if(len(new_color)==5):
+                        new_color = new_color[0:4] #trim transparency digit
+                    if(len(new_color)==9):
+                        new_color = new_color[0:7] #trim transparency digits
+                    data = data.replace("PLACEHOLDER_"+key,new_color)
             if("show_all" in newcols.keys()):
                 if(newcols["show_all"]):
                     data = data.replace("display:none;","display:inline;")
