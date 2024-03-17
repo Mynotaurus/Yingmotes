@@ -21,11 +21,9 @@ The script `generate.py` is used to generate all the different colour palettes a
 
 running it as `python generate.py palette1 palette2 ...` will only export specific palettes, and `python generate.py emote1.svg emote2.svg ...` will only export specific emotes, these can be mixed and matched to export specific emotes in specific palettes eg `python generate.py yinglime ying_sit.svg`
 
-To add custom palettes, add the colors you want to `config.toml`, following the other `pallete.name` tables as an example.  If you want a tailpoof, set `show_all` to `true` in your palette.
+To add custom palettes, add the colors you want to `config.toml`, following the other `palette.name` tables as an example.  If you want hair and a tailpoof, set `show_all` to `true` in your palette. To hide any layer (ie if you want hair and no tailpoof), you can set its color to `#0000` to hide it completely.
 
 Changing the array `res` allows you to set any number of custom export resolutions you may need. The defaults are 128x128px and 720x720px.
 Setting the variable `reverse` to `true` will generate flipped versions of each emote as well, stored in a seperate /reversed/ folder for each palette.
-
-the code is so bad but hopefully in a way thats understandable at least, lol
 ## License
 These are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International https://creativecommons.org/licenses/by-nc-sa/4.0/
