@@ -1,0 +1,52 @@
+res = [128,720] # Resolutions to export at
+reverse = true # If true, generate flipped versions (as well as normal versions)
+
+palette.ying = {} # Default pallete, so nothing is changed!
+
+[palette.yinglemon]
+	main = "#ff0"
+	line = "#6a6a1c"
+	dark = "#cc0"
+	lid  = "#808000"
+	hand = "#aa0"
+	tongue="#d40000"
+
+[palette.yinglime]
+	main = "#9f8"
+	eye = "#cff"
+	line = "#131"
+	dark = "#3b4"
+	lid =  "#474"
+	hand = "#474"
+	tongue = "#141"
+	hair = "#262"
+	tail = "#262"
+	heart_inner = "#0f0"
+	heart_outer = "#131"
+	show_all = true
+
+[palette.myno]
+	main="#e4d9b9"
+	eye = "#cdebfd"
+	line = "#880056"
+	dark = "#a99f8b"
+	lid = "#a99f8b"
+	hand = "#a99f8b"
+	hair = "#913fef"
+	tail = "#913fef"
+	tongue = "#ff66aa"
+	heart_inner = "#fc037b"
+	heart_outer = "#94017b"
+	show_all = true
+
+[palette.thio]
+	main = "#b79879"
+	eye = "#6574c1"
+	line = "#3a332d"
+	dark = "#b58765"
+	lid = "#ddcdbd"
+	hand = "#3a332d"
+	hair = "#6dadfb"
+	tongue = "#953036"
+	tail = "#ddcdbd"
+	show_all = true
