@@ -1,7 +1,7 @@
 res = [128,720] # Resolutions to export at
 reverse = true # If true, generate flipped versions (as well as normal versions)
 
-palette.ying = {} # Default pallete, so nothing is changed!
+palette.ying = {} # Default palette, so nothing is changed!
 
 [palette.yinglemon]
 	main = "#ff0"
