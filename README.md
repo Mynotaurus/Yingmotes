@@ -25,5 +25,7 @@ To add custom palettes, add the colors you want to `config.toml`, following the 
 
 Changing the array `res` allows you to set any number of custom export resolutions you may need. The defaults are 128x128px and 720x720px.
 Setting the variable `reverse` to `true` will generate flipped versions of each emote as well, stored in a seperate /reversed/ folder for each palette.
+
+The apng files for animated emotes produced by the generator fail to be read by ffmpeg, so if video transcoding is needed for you, you can set `webp` to `true`, which exports all the animated emojis as ffmpeg-compatible animated webp files.
 ## License
 These are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International https://creativecommons.org/licenses/by-nc-sa/4.0/
