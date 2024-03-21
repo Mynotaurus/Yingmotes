@@ -1,5 +1,7 @@
 res = [128,720] # Resolutions to export at
 reverse = true # If true, generate flipped versions (as well as normal versions)
+webp = false # If true, create animated emojis as webp files as well as apngs
+
 
 palette.ying = {} # Default palette, so nothing is changed!
 

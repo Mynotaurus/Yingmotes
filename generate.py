@@ -4,6 +4,7 @@ import os, shutil, subprocess, sys, json, tarfile, toml
 from apng import APNG
 from PIL import Image
 from zipfile import ZipFile
+import webp
 
 #first load all svgs
 print("-- Finding SVGs...")
@@ -45,6 +46,7 @@ config = toml.load("config.toml") #load config file
 res = config["res"]
 reverse = config["reverse"]
 palettes = config["palette"]
+doWebp = config["webp"]
 
 filtered_palettes = {} #specifying palette names in the command line arguments will only export those palettes
 palette_count = 0
@@ -85,6 +87,11 @@ for pal in palettes.keys():
             os.mkdir("out/"+pal+"/temp"+str(i))
         except:
             pass
+        if(doWebp):
+            try:
+                os.mkdir("out/"+pal+"/webp"+str(i))
+            except:
+                pass
 
     if reverse: #make reversed directories too if we need them
         try:
@@ -216,6 +223,24 @@ for pal in palettes.keys():
                         else:
                             im.append_file("out/"+pal+"/reversed/png"+str(i)+"/"+frame[0].replace("ying","rev"+pal),delay=frame[1])
                     im.save("out/"+pal+"/reversed/png"+str(i)+"/"+anim_name.replace("ying","rev"+pal))
+                    
+
+            if doWebp:
+                enc = webp.WebPAnimEncoder.new(i, i)
+                timestamp_ms = 0
+                for frame in anim:
+                    path = ""
+                    if os.path.exists("out/"+pal+"/temp"+str(i)+"/"+frame[0].replace("ying",pal).replace("temp/","")):
+                        path = "out/"+pal+"/temp"+str(i)+"/"+frame[0].replace("ying",pal).replace("temp/","")
+                    else:
+                        path = "out/"+pal+"/png"+str(i)+"/"+frame[0].replace("ying",pal)
+                    picture = Image.open(path)
+                    pic = webp.WebPPicture.from_pil(picture)
+                    enc.encode_frame(pic, timestamp_ms)
+                    timestamp_ms += frame[1]
+                animd = enc.assemble(timestamp_ms)
+                with open("out/"+pal+"/webp"+str(i)+"/"+anim_name.replace("ying",pal).replace(".png",".webp"), 'wb') as f:
+                    f.write(animd.buffer())
 
 
     for i in ["export","export/tarballs"]:
