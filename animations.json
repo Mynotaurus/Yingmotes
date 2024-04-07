@@ -7,6 +7,14 @@
         ["aying_bongos_frame1.png",50],
         ["aying_bongos_frame2.png",50]
     ],
+    "aying_bongos_laptop.png":[
+        ["aying_bongos_laptop_frame1.png",150],
+        ["aying_bongos_laptop_frame2.png",150]
+    ],
+    "aying_bongos_laptop_hyper.png":[
+        ["aying_bongos_laptop_frame1.png",50],
+        ["aying_bongos_laptop_frame2.png",50]
+    ],
     "aying_laugh.png":[
         ["ying_laugh.png"       ,120],
         ["aying_laugh_frame2.png",120]
