@@ -130,5 +130,9 @@
         ["aying_peek_frame4.png", 2000],
         ["aying_peek_frame3.png", 80],
         ["aying_peek_frame2.png", 80]
+    ],
+    "aying_wink.png":[
+        ["ying_wink.png",    500],
+        ["ying.png",         500]
     ]
 }}
