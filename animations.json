@@ -134,5 +134,14 @@
     "aying_wink.png":[
         ["ying_wink.png",    500],
         ["ying.png",         500]
+    ],
+    "aying_pet_melt.png":[
+        ["ying_pet_melt2.png",400],
+        ["ying_pet_melt.png",100],
+        ["ying_pet.png",     100],
+        
+        ["aying_pet_frame2.png",  400],
+        ["ying_pet.png",     200],
+        ["ying_pet_melt.png",200]
     ]
 }}
