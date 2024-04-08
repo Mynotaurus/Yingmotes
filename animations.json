@@ -179,5 +179,9 @@
     "aying_missing.png":[
         ["ying_missing.png", 400],
         ["nothing.png", 400]
+    ],
+    "aying_grabby_hands.png":[
+        ["ying_reach.png", 300],
+        ["ying_grabby.png",300]
     ]
 }}
