@@ -160,5 +160,11 @@
         ["ying_dance_down_flip.png",150],
         ["ying_dance_up_flip.png",  150],
         ["ying_dance_mid.png",       80]
+    ],
+    "aying_annoyed.png":[
+        ["ying_annoyed.png", 1200],
+        ["ying_annoyed_twitch.png", 80],
+        ["ying_annoyed.png", 80],
+        ["ying_annoyed_twitch.png", 80]
     ]
 }}
