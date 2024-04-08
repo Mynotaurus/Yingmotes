@@ -175,5 +175,9 @@
         ["ying_annoyed_twitch.png", 80],
         ["ying_annoyed.png", 80],
         ["ying_annoyed_twitch.png", 80]
+    ],
+    "aying_missing.png":[
+        ["ying_missing.png", 400],
+        ["nothing.png", 400]
     ]
 }}
