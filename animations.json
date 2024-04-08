@@ -151,5 +151,14 @@
         ["aying_pet_frame2.png",  400],
         ["ying_pet.png",     200],
         ["ying_pet_melt.png",200]
+    ],
+    "aying_dance.png":[
+        ["ying_dance_down.png",150],
+        ["ying_dance_up.png",  150],
+        ["ying_dance_mid.png",  80],
+        
+        ["ying_dance_down_flip.png",150],
+        ["ying_dance_up_flip.png",  150],
+        ["ying_dance_mid.png",       80]
     ]
 }}
