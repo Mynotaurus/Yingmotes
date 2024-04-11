@@ -154,11 +154,13 @@ for pal in palettes.keys():
                     data = data.replace("display:none;","display:inline;")
     
         #check if files are already exported and if so, skip them
-        allpngs = True
-        allreversed = True
+        allpngs = False
+        allreversed = False
         if(os.path.exists("out/"+pal+"/svg/"+vectorfile.replace("ying",pal))):
             with open("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), 'r') as f:
                 if(f.read()==data):
+                    allpngs = True
+                    allreversed = True
                     for i in res:
                         if(not os.path.exists("out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal)) and not os.path.exists("out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))):
                             allpngs = False

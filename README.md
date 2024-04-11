@@ -10,9 +10,12 @@ For most purposes, I would recommend the **ying** color scheme, as it has the be
 
 Yinglets are the creation of [Valsalia](https://www.valsalia.com/)
 
+## Hug emote credits
 The wonderful [dragn emote set](https://github.com/chr-1x/dragn-emoji) was made by khr
 
-Neofoxes and Neocats are the creations of [Volpeon](https://volpeon.ink/emojis/)
+Neofoxes, Neocats, BunHD and the Floof emotes are the creations of [Volpeon](https://volpeon.ink/emojis/)
+
+Neopossums are a set of emotes based on Neofoxes by [Ibly](https://skunks.gay/)
 
 The :ms_robot: emoji is from the [Mutant Standard](https://mutant.tech/) emote set
 

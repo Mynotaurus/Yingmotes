@@ -7,6 +7,14 @@
         ["aying_bongos_frame1.png",50],
         ["aying_bongos_frame2.png",50]
     ],
+    "aying_bongos_laptop.png":[
+        ["aying_bongos_laptop_frame1.png",150],
+        ["aying_bongos_laptop_frame2.png",150]
+    ],
+    "aying_bongos_laptop_hyper.png":[
+        ["aying_bongos_laptop_frame1.png",50],
+        ["aying_bongos_laptop_frame2.png",50]
+    ],
     "aying_laugh.png":[
         ["ying_laugh.png"       ,120],
         ["aying_laugh_frame2.png",120]
@@ -130,5 +138,50 @@
         ["aying_peek_frame4.png", 2000],
         ["aying_peek_frame3.png", 80],
         ["aying_peek_frame2.png", 80]
+    ],
+    "aying_wink.png":[
+        ["ying_wink.png",    500],
+        ["ying.png",         500]
+    ],
+    "aying_pet_melt.png":[
+        ["ying_pet_melt2.png",400],
+        ["ying_pet_melt.png",100],
+        ["ying_pet.png",     100],
+        
+        ["aying_pet_frame2.png",  400],
+        ["ying_pet.png",     200],
+        ["ying_pet_melt.png",200]
+    ],
+    "aying_dance.png":[
+        ["ying_dance_down.png",170],
+        ["ying_dance_up.png",  170],
+        ["ying_dance_mid.png", 100],
+        
+        ["ying_dance_down_flip.png",170],
+        ["ying_dance_up_flip.png",  170],
+        ["ying_dance_mid.png",      100]
+    ],
+    "aying_dance_hyper.png":[
+        ["ying_dance_down.png",100],
+        ["ying_dance_up.png",  100],
+        ["ying_dance_mid.png",  50],
+        
+        ["ying_dance_down_flip.png",100],
+        ["ying_dance_up_flip.png",  100],
+        ["ying_dance_mid.png",       50]
+    ],
+    "aying_annoyed.png":[
+        ["ying_annoyed.png", 1200],
+        ["ying_annoyed_twitch.png", 80],
+        ["ying_annoyed.png", 80],
+        ["ying_annoyed_twitch.png", 80]
+    ],
+    "aying_missing.png":[
+        ["ying_missing.png", 400],
+        ["nothing.png", 400]
+    ],
+    "aying_grabby_hands.png":[
+        ["ying_reach.png", 300],
+        ["ying_grabby.png",300]
     ]
 }}
