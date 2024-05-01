@@ -60,7 +60,8 @@ if(len(filtered_palettes.keys())>0):
 
 def convert_with_inkscape(file,res,out):
     #call inkscape from command line to export - this renders svgs slowly but accurately
-    args = "inkscape " + file + " --export-area-page -w "+ str(res)+" -h "+ str(res)+" --export-filename=" + out
+    inkscape_path = "inkscape" #if youre getting errors saying command called inkscape isnt found, change this to the file path of your inkscape executable!
+    args = inkscape_path + " " + file + " --export-area-page -w "+ str(res)+" -h "+ str(res)+" --export-filename=" + out
     print(subprocess.run(args,shell=True)) #if this says "returncode=0" thats good! if its not a zero thats bad, smths going wrong
 
 print("- Making output directory...")
