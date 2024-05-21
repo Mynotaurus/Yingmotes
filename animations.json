@@ -183,5 +183,9 @@
     "aying_grabby_hands.png":[
         ["ying_reach.png", 300],
         ["ying_grabby.png",300]
+    ],
+    "aying_tail_swish.png":[
+        ["ying_tail_up.png", 400],
+        ["ying_tail_down.png",400]
     ]
 }}
