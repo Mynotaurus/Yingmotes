@@ -34,15 +34,15 @@
     ],
     "aying_tail_twitch.png":[
         ["ying_tail_up.png",      500],
-        ["ying_tail_down.png",     80],
+        ["ying_tail_swish.png",     80],
         ["ying_tail_up.png",       50],
-        ["ying_tail_down.png",     80],
+        ["ying_tail_swish.png",     80],
         ["ying_tail_up.png",      850],
-        ["ying_tail_down.png",     80],
+        ["ying_tail_swish.png",     80],
         ["ying_tail_up.png",       50],
-        ["ying_tail_down.png",     80],
+        ["ying_tail_swish.png",     80],
         ["ying_tail_up.png",       50],
-        ["ying_tail_down.png",     80]
+        ["ying_tail_swish.png",     80]
     ],
     "aying_pet.png":[
         ["ying_pet.png",          400],
@@ -195,5 +195,17 @@
     "aying_tail_swish.png":[
         ["ying_tail_up.png", 400],
         ["ying_tail_down.png",400]
+    ],
+    "aying_tail_swish_hyper.png":[
+        ["ying_tail_up.png", 150],
+        ["ying_tail_down.png",150]
+    ],
+    "aying_tail_swish_small.png":[
+        ["ying_tail_up.png", 400],
+        ["ying_tail_swish.png",400]
+    ],
+    "aying_tail_swish_small_hyper.png":[
+        ["ying_tail_up.png", 150],
+        ["ying_tail_swish.png",150]
     ]
 }}
