@@ -27,6 +27,30 @@ palette.ying = {} # Default palette, so nothing is changed!
 	heart_outer = "#131"
 	show_all = true
 
+[palette.p2]
+    main=  "#5fd3bc" 
+    eye =  "#ccfefe" 
+    line = "#165044" 
+    dark = "#389482" 
+    lid =  "#2ca089" 
+    hand = "#3a685f" 
+    tongue="#8B305C" 
+    hair = "#345612" 
+    tail = "#456723" 
+    heart_inner="#00c3ff"
+    heart_outer="#0080a2"
+	p2_main=  "#ffcb4c"
+    p2_eye =  "#fefefe"
+    p2_line = "#65471b"
+    p2_dark = "#f19020"
+    p2_lid =  "#d19020"
+    p2_hand = "#a18020"
+    p2_tongue="#ff5678"
+    p2_hair = "#123456"
+    p2_tail = "#234567"
+    p2_heart_inner="#ff5555"
+    p2_heart_outer="#b10020"
+
 [palette.myno]
 	main="#e4d9b9"
 	eye = "#cdebfd"
