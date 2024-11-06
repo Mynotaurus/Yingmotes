@@ -35,10 +35,25 @@ defaultcols = {
     "tongue":"#ff5678",   #tongue colour (for all important bleps)
     "hair" : "#123456",   #hair colour, only shown when show_all = True
     "tail" : "#234567",   #tail colour, only shown when show_all = True
-    "show_all":False,      #show_all shows all hidden layers, this renders both the hair and tail tuft
-    # to hide either hair or tail seperately, set its color to #0000, this makes it transparent (must be exactly #0000 to work)
     "heart_inner":"#ff5555",
-    "heart_outer":"#b10020"
+    "heart_outer":"#b10020",
+
+    "p2_main":  "#5fd3bc",   #p2 primary colour
+    "p2_eye" :  "#ccfefe",   #p2 eye colour
+    "p2_line" : "#165044",   #p2 line colours
+    "p2_dark" : "#389482",   #p2 darker version of the primary colour for background details
+    "p2_lid" :  "#2ca089",   #p2 eyelid colour
+    "p2_hand" : "#3a685f",   #p2 hand colour, needs to be different from others for contrast
+    "p2_tongue":"#8B305C",   #p2 tongue colour (for all important bleps)
+    "p2_hair" : "#345612",   #p2 hair colour, only shown when show_all = True
+    "p2_tail" : "#456723",   #p2 tail colour, only shown when show_all = True
+    "p2_heart_inner":"#00c3ff",
+    "p2_heart_outer":"#0080a2",
+
+    "show_all":False,      #show_all shows all hidden layers, this renders both the hair and tail tuft
+
+    # to hide either hair or tail seperately, set its color to #0000, this makes it transparent (must be exactly #0000 to work)
+    
 }
 
 config = toml.load("config.toml") #load config file
