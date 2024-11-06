@@ -26,6 +26,8 @@ palette.ying = {} # Default palette, so nothing is changed!
 	heart_inner = "#0f0"
 	heart_outer = "#131"
 	show_all = true
+	p2_hair = "#0000"
+	p2_tail = "#0000"
 
 [palette.p2]
     main=  "#5fd3bc" 
@@ -64,6 +66,8 @@ palette.ying = {} # Default palette, so nothing is changed!
 	heart_inner = "#fc037b"
 	heart_outer = "#94017b"
 	show_all = true
+	p2_hair = "#0000"
+	p2_tail = "#0000"
 
 [palette.thio]
 	main = "#b79879"
@@ -76,3 +80,5 @@ palette.ying = {} # Default palette, so nothing is changed!
 	tongue = "#953036"
 	tail = "#ddcdbd"
 	show_all = true
+	p2_hair = "#0000"
+	p2_tail = "#0000"
