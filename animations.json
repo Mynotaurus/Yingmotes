@@ -207,5 +207,13 @@
     "aying_tail_swish_small_hyper.png":[
         ["ying_tail_up.png", 150],
         ["ying_tail_swish.png",150]
+    ],
+    "aying_excited.png":[
+        ["ying_excited.png", 400],
+        ["aying_excited_bob.png",400]
+    ],
+    "aying_excited_hyper.png":[
+        ["ying_excited.png", 150],
+        ["aying_excited_bob.png",150]
     ]
 }}
