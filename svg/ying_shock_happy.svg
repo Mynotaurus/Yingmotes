@@ -27,9 +27,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="0.080067408"
-     inkscape:cx="636.9633"
-     inkscape:cy="1142.7871"
+     inkscape:zoom="0.22646483"
+     inkscape:cx="640.27602"
+     inkscape:cy="889.76289"
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      inkscape:window-x="-9"
@@ -61,7 +61,7 @@
        inkscape:groupmode="layer">
       <g
          id="g11101"
-         transform="rotate(7.5868838,1436.6673,-621.75976)"
+         transform="rotate(7.5868838,1045.4393,-224.78043)"
          style="display:inline">
         <g
            id="g11065"
@@ -198,7 +198,7 @@
            inkscape:label="right nostril" />
         <path
            style="display:inline;fill:none;fill-opacity:1;stroke:#65471b;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="m 132.4709,1346.7875 90.52178,-72.859 c 0,0 119.42334,86.7104 195.60735,84.1581 131.8052,-4.4157 101.36956,-57.7465 101.36956,-57.7465"
+           d="m 132.4709,1346.7875 90.52178,-72.859 c 0,0 169.05124,113.1183 245.23525,110.566 131.8052,-4.4157 135.42626,-68.9258 135.42626,-68.9258"
            id="path2200"
            sodipodi:nodetypes="ccsc"
            inkscape:label="mouf" />
@@ -240,7 +240,7 @@
       <g
          id="layer2"
          inkscape:label="hand"
-         transform="matrix(-0.46273639,-0.94021237,-1.0846256,0.36740993,2456.3015,1243.4512)"
+         transform="matrix(-0.46273639,-0.94021237,-1.0846256,0.36740993,2441.2896,1298.58)"
          style="display:inline;fill:none;fill-opacity:1;stroke:#888800;stroke-width:0.916778;stroke-opacity:1">
         <path
            style="fill:none;fill-opacity:1;stroke:#a18020;stroke-width:88.0107;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
