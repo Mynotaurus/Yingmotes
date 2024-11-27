@@ -144,7 +144,6 @@ for pal in palettes.keys():
                         datalined = data.split("\n")
                         for line in range(len(datalined)): #loop through lines of text
                             if ("fill:"+defaultcols[key] in datalined[line]) and ("stroke:"+defaultcols[key] in datalined[line]): #both fill and stroke?
-                                print(datalined[line])
                                 if ";opacity:1;" in datalined[line]: #look for previously set opacity
                                     datalined[line] = datalined[line].replace(";opacity:1",";opacity:"+str(new_opacity))
                                 else:
@@ -154,6 +153,11 @@ for pal in palettes.keys():
                                     datalined[line] = datalined[line].replace("fill-opacity:1","fill-opacity:"+str(new_opacity))
                                 else:
                                     datalined[line] = datalined[line].replace('style="', 'style="fill-opacity:'+str(new_opacity)+';')
+                            elif "stroke:"+defaultcols[key] in datalined[line]: #if stroke, only change stroke opacity
+                                if "stroke-opacity:1;" in datalined[line]: #look for previously set opacity
+                                    datalined[line] = datalined[line].replace("stroke-opacity:1","stroke-opacity:"+str(new_opacity))
+                                else:
+                                    datalined[line] = datalined[line].replace('style="', 'style="stroke-opacity:'+str(new_opacity)+';')
                         
                         data = "\n".join(datalined) # recombine lines
                     data = data.replace(defaultcols[key],"PLACEHOLDER_"+key)
