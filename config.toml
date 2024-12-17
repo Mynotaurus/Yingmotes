@@ -5,15 +5,7 @@ webp = false # If true, create animated emojis as webp files as well as apngs
 
 palette.ying = {} # Default palette, so nothing is changed!
 
-[palette.yinglemon]
-	main = "#ff0"
-	line = "#6a6a1c"
-	dark = "#cc0"
-	lid  = "#808000"
-	hand = "#aa0"
-	tongue="#d40000"
-
-[palette.yinglime]
+[palette.mint]
 	main = "#9f8"
 	eye = "#cff"
 	line = "#131"
