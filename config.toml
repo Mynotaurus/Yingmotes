@@ -68,17 +68,3 @@ palette.ying = {} # Default palette, so nothing is changed!
 	show_all = true
 	p2_hair = "#0000"
 	p2_tail = "#0000"
-
-[palette.thio]
-	main = "#b79879"
-	eye = "#6574c1"
-	line = "#3a332d"
-	dark = "#b58765"
-	lid = "#ddcdbd"
-	hand = "#3a332d"
-	hair = "#6dadfb"
-	tongue = "#953036"
-	tail = "#ddcdbd"
-	show_all = true
-	p2_hair = "#0000"
-	p2_tail = "#0000"
