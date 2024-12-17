@@ -190,18 +190,18 @@ for pal in palettes.keys():
                         print(" - SVGs match and all PNGs exist. Skipping...")
                         continue
         
-        print(" - Saving vector "+pal+"/svg/"+vectorfile+"...")
+        print(" - Saving vector "+pal+"/svg/"+vectorfile.replace("ying",pal)+"...")
         with open("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), 'w') as f:
             f.write(data)
 
         for i in res:
             if not allpngs:
                 if(vectorfile in temps):
-                    print(" - Saving image "+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("temp/","")+"...")
+                    print(" - Saving image "+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/","")+"...")
                     convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))
                     
                 else:
-                    print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
+                    print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal)+"...")
                     convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
 
             if reverse and not allreversed:
@@ -210,7 +210,7 @@ for pal in palettes.keys():
                     img = Image.open("out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))
                     img.transpose(Image.Transpose.FLIP_LEFT_RIGHT).save("out/"+pal+"/reversed/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying","rev"+pal).replace("temp/",""))
                 else:
-                    print("  - Reversing "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
+                    print("  - Reversing "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal)+"...")
                     img = Image.open("out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
                     img.transpose(Image.Transpose.FLIP_LEFT_RIGHT).save("out/"+pal+"/reversed/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying","rev"+pal))
 
