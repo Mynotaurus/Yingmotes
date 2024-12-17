@@ -35,10 +35,25 @@ defaultcols = {
     "tongue":"#ff5678",   #tongue colour (for all important bleps)
     "hair" : "#123456",   #hair colour, only shown when show_all = True
     "tail" : "#234567",   #tail colour, only shown when show_all = True
-    "show_all":False,      #show_all shows all hidden layers, this renders both the hair and tail tuft
-    # to hide either hair or tail seperately, set its color to #0000, this makes it transparent (must be exactly #0000 to work)
     "heart_inner":"#ff5555",
-    "heart_outer":"#b10020"
+    "heart_outer":"#b10020",
+
+    "p2_main":  "#5fd3bc",   #p2 primary colour
+    "p2_eye" :  "#ccfefe",   #p2 eye colour
+    "p2_line" : "#165044",   #p2 line colours
+    "p2_dark" : "#389482",   #p2 darker version of the primary colour for background details
+    "p2_lid" :  "#2ca089",   #p2 eyelid colour
+    "p2_hand" : "#3a685f",   #p2 hand colour, needs to be different from others for contrast
+    "p2_tongue":"#8B305C",   #p2 tongue colour (for all important bleps)
+    "p2_hair" : "#345612",   #p2 hair colour, only shown when show_all = True
+    "p2_tail" : "#456723",   #p2 tail colour, only shown when show_all = True
+    "p2_heart_inner":"#00c3ff",
+    "p2_heart_outer":"#0080a2",
+
+    "show_all":False,      #show_all shows all hidden layers, this renders both the hair and tail tuft
+
+    # to hide either hair or tail seperately, set its color to #0000, this makes it transparent (must be exactly #0000 to work)
+    
 }
 
 config = toml.load("config.toml") #load config file
@@ -129,7 +144,6 @@ for pal in palettes.keys():
                         datalined = data.split("\n")
                         for line in range(len(datalined)): #loop through lines of text
                             if ("fill:"+defaultcols[key] in datalined[line]) and ("stroke:"+defaultcols[key] in datalined[line]): #both fill and stroke?
-                                print(datalined[line])
                                 if ";opacity:1;" in datalined[line]: #look for previously set opacity
                                     datalined[line] = datalined[line].replace(";opacity:1",";opacity:"+str(new_opacity))
                                 else:
@@ -139,6 +153,11 @@ for pal in palettes.keys():
                                     datalined[line] = datalined[line].replace("fill-opacity:1","fill-opacity:"+str(new_opacity))
                                 else:
                                     datalined[line] = datalined[line].replace('style="', 'style="fill-opacity:'+str(new_opacity)+';')
+                            elif "stroke:"+defaultcols[key] in datalined[line]: #if stroke, only change stroke opacity
+                                if "stroke-opacity:1;" in datalined[line]: #look for previously set opacity
+                                    datalined[line] = datalined[line].replace("stroke-opacity:1","stroke-opacity:"+str(new_opacity))
+                                else:
+                                    datalined[line] = datalined[line].replace('style="', 'style="stroke-opacity:'+str(new_opacity)+';')
                         
                         data = "\n".join(datalined) # recombine lines
                     data = data.replace(defaultcols[key],"PLACEHOLDER_"+key)
@@ -171,18 +190,18 @@ for pal in palettes.keys():
                         print(" - SVGs match and all PNGs exist. Skipping...")
                         continue
         
-        print(" - Saving vector "+pal+"/svg/"+vectorfile+"...")
+        print(" - Saving vector "+pal+"/svg/"+vectorfile.replace("ying",pal)+"...")
         with open("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), 'w') as f:
             f.write(data)
 
         for i in res:
             if not allpngs:
                 if(vectorfile in temps):
-                    print(" - Saving image "+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("temp/","")+"...")
+                    print(" - Saving image "+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/","")+"...")
                     convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))
                     
                 else:
-                    print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
+                    print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal)+"...")
                     convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
 
             if reverse and not allreversed:
@@ -191,7 +210,7 @@ for pal in palettes.keys():
                     img = Image.open("out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))
                     img.transpose(Image.Transpose.FLIP_LEFT_RIGHT).save("out/"+pal+"/reversed/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying","rev"+pal).replace("temp/",""))
                 else:
-                    print("  - Reversing "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png")+"...")
+                    print("  - Reversing "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal)+"...")
                     img = Image.open("out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
                     img.transpose(Image.Transpose.FLIP_LEFT_RIGHT).save("out/"+pal+"/reversed/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying","rev"+pal))
 
