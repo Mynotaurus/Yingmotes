@@ -1,7 +1,7 @@
 # Yingmotes
 A customisable yinglet emote pack!
 
-![ying](https://github.com/Mynotaurus/Yingmotes/assets/46263022/5b599ff6-df27-4fc4-9fa8-b640258e48e1) ![yinglemon_nom_clam](https://github.com/Mynotaurus/Yingmotes/assets/46263022/16aa4413-5f39-489a-98fb-dc655d87a53d) ![yinglime_comfy_mug](https://github.com/Mynotaurus/Yingmotes/assets/46263022/dece219b-99c1-4f07-8e90-2d8eca13cbc6) ![myno_aww](https://github.com/Mynotaurus/Yingmotes/assets/46263022/3c94f6cd-22f9-4e09-9371-2e7a5a384139) ![ap2_bongos](https://github.com/user-attachments/assets/04a7260b-e520-4342-8341-c11b0f6d1562)
+![ying](https://github.com/Mynotaurus/Yingmotes/assets/46263022/5b599ff6-df27-4fc4-9fa8-b640258e48e1) ![mint_comfy_mug](https://github.com/Mynotaurus/Yingmotes/assets/46263022/dece219b-99c1-4f07-8e90-2d8eca13cbc6) ![myno_aww](https://github.com/Mynotaurus/Yingmotes/assets/46263022/3c94f6cd-22f9-4e09-9371-2e7a5a384139) ![ap2_bongos](https://github.com/user-attachments/assets/04a7260b-e520-4342-8341-c11b0f6d1562)
 
 
 
