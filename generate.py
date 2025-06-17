@@ -45,7 +45,7 @@ defaultcols = {
     "p2_dark":        "#389482", #p2 darker version of the primary colour for background details
     "p2_lid":         "#2ca089", #p2 eyelid colour
     "p2_hand":        "#3a685f", #p2 hand colour, needs to be different from others for contrast
-    "p2_tongue":      "#8B305C", #p2 tongue colour (for all important bleps)
+    "p2_tongue":      "#8b305c", #p2 tongue colour (for all important bleps)
     "p2_hair":        "#345612", #p2 hair colour, only shown when show_all = True
     "p2_tail":        "#456723", #p2 tail colour, only shown when show_all = True
     "p2_heart_inner": "#00c3ff", #p2 fill colour on hearts
@@ -55,7 +55,7 @@ defaultcols = {
     
     "heterochromia": False #enable if you want each eye to have a different colour
     
-    # to hide either hair or tail seperately, set its color to #0000, this makes it transparent (must be exactly #0000 to work)
+    # to hide either hair or tail seperately, set its colour to #0000, this makes it transparent (must be exactly #0000 to work)
 }
 
 config = toml.load("config.toml") #load config file
@@ -102,22 +102,22 @@ except:
     print("- Output directory already exists.")
 
 for pal in palettes.keys():
-    newcols = palettes[pal]
+    newcols = {**defaultcols, **palettes[pal]} # merge palette overrides against default palette
     
     # cache opacity override for each palette key if specified (#rgba or #rrggbbaa)
     newOpacity = {}
     for key in newcols.keys():
-        colorValue = newcols[key]
-        if not isinstance(colorValue, str): continue # skip non strings
+        colourValue = newcols[key]
+        if not isinstance(colourValue, str): continue # skip non strings
         
         opacityOverride = 1
         
-        if(len(colorValue)==5): # #rgba
-            opacityOverride = int(colorValue[4],16)/15
-            newcols[key] = colorValue[0:4] # trim alpha
+        if(len(colourValue)==5): # #rgba
+            opacityOverride = int(colourValue[4],16)/15
+            newcols[key] = colourValue[0:4] # trim alpha
         elif(len(newcols[key])==9): # #rrggbbaa
-            opacityOverride = int(colorValue[7:9],16)/255
-            newcols[key] = colorValue[0:7] # trim alpha
+            opacityOverride = int(colourValue[7:9],16)/255
+            newcols[key] = colourValue[0:7] # trim alpha
         
         # override if needed
         if(opacityOverride < 1):
@@ -177,74 +177,74 @@ for pal in palettes.keys():
         #hell yeah lets ctrl+h the heck out of this file
         with open("svg/"+vectorfile, 'r') as f:
             data = f.read()
+        
+        # context-aware parsing
+        root = ET.XML(data.encode("UTF-8"))
+        
+        for elem in root.iter():
+            # only looking for paths
+            if (trim_xmlns(elem.tag)!="path"): continue
             
-            # context-aware parsing
-            root = ElementTree.fromstring(data)
+            # get style of path, or skip if it doesn't have style
+            style_key = next((k for k in elem.attrib if trim_xmlns(k) == "style"), None)
+            if style_key is None: continue
+            style = elem.attrib[style_key]
             
-            for elem in root.iter():
-                # only looking for paths
-                if (trim_xmlns(elem.tag)!="path"): continue
+            # Locate fill/stroke that have colour literals matching a key in defaultcols; if so, mark for replacement
+            strokeKey = None
+            strokeStyleText = None
+            fillKey = None
+            fillStyleText = None
+            fillRpl = None
+            
+            for key, colour in defaultcols.items():
+                sT = f"stroke:{colour};"
+                fT = f"fill:{colour};"
                 
-                # get style of path, or skip if it doesn't have style
-                style_key = next((k for k in elem.attrib if local_name(k) == "style"), None)
-                if style_key is None: continue
-                style = elem.attrib
-                
-                # Locate fill/stroke that have color literals matching a key in defaultcols; if so, mark for replacement
-                strokeKey = None
-                strokeStyleText = None
-                fillKey = None
-                fillStyleText = None
-                fillRpl = None
-                
-                for key, color in defaultcols.items():
-                    sT = f"stroke:{color};"
-                    fT = f"fill:{color};"
-                    
-                    if sT in style:
-                        strokeStyleText = sT
-                        strokeKey = key
-                    if fT in style:
-                        fillStyleText = fT
-                        fillKey = key
-                
+                if sT in style:
+                    strokeStyleText = sT
+                    strokeKey = key
+                if fT in style:
+                    fillStyleText = fT
+                    fillKey = key
+            
             #<-- for elem in root.iter():
-                if strokeKey is not None:
-                    rplKey = "wehh"
-                    # heterochromia mode gogo
-                    if (strokeKey=="eye") and ("heterochromia" in newcols) and (newcols["heterochromia"]):
-                        if in_group_labelled("left eye", elem): # find if we are on left eye
-                            rplKey = "eye_left"
-                        else:
-                            rplKey = "eye_right"
-                    else: # regular palette swap
-                        rplKey = strokeKey
-                    
-                    opacityOverride = newOpacity.get(rplKey) # override opacity if necessary
-                    
-                    if(strokeKey==fillKey): # we can replace both at once if so
-                        fillRpl = "fill:" + newcols[rplKey] + ";" # set fill's replacement here to save cycles (speedrunning)
-                        
-                        if opacityOverride is not None:
-                            # we can just set 'opacity' instead of 'fill-opacity' or 'stroke-opacity' separately
-                            if ";opacity:1" in style:
-                                style = style.replace(";opacity:1", ";opacity:" + str(opacityOverride))
-                            else:
-                                style = "opacity:" + str(opacityOverride) + ";" + style #prepend
-                    elif opacityOverride is not None:
-                        if ";stroke-opacity:1" in style:
-                            style = style.replace(";stroke-opacity:1", ";stroke-opacity:" + str(opacityOverride))
-                        else:
-                            style = "stroke-opacity:" + str(opacityOverride) + ";" + style #prepend
-                    
-                    style = style.replace(strokeStyleText, "stroke:" + newcols[rplKey] + ";")
+            if strokeKey is not None:
+                rplKey = "wehh"
+                # heterochromia mode gogo
+                if (strokeKey=="eye") and ("heterochromia" in newcols) and (newcols["heterochromia"]):
+                    if in_group_labelled("left eye", elem): # find if we are on left eye
+                        rplKey = "eye_left"
+                    else:
+                        rplKey = "eye_right"
+                else: # regular palette swap
+                    rplKey = strokeKey
                 
-            #<-- for elem in root.iter():
-                if fillKey is not None:
-                    if fillRpl is not None:
-                        style = style.replace(fillStyleText, fillRpl)
-                        continue
+                opacityOverride = newOpacity.get(rplKey) # override opacity if necessary
+                
+                if(strokeKey==fillKey): # we can replace both at once if so
+                    fillRpl = "fill:" + newcols[rplKey] + ";" # set fill's replacement here to save cycles (speedrunning)
                     
+                    if opacityOverride is not None:
+                        # we can just set 'opacity' instead of 'fill-opacity' or 'stroke-opacity' separately
+                        if ";opacity:1" in style:
+                            style = style.replace(";opacity:1", ";opacity:" + str(opacityOverride))
+                        else:
+                            style = "opacity:" + str(opacityOverride) + ";" + style #prepend
+                elif opacityOverride is not None:
+                    if ";stroke-opacity:1" in style:
+                        style = style.replace(";stroke-opacity:1", ";stroke-opacity:" + str(opacityOverride))
+                    else:
+                        style = "stroke-opacity:" + str(opacityOverride) + ";" + style #prepend
+                
+                style = style.replace(strokeStyleText, "stroke:" + newcols[rplKey] + ";")
+            
+            #<-- for elem in root.iter():
+            if fillKey is not None:
+                if fillRpl is not None: # already know our fill replacement, and opacity already set
+                    style = style.replace(fillStyleText, fillRpl)
+                
+                else:
                     rplKey = "wehh"
                     # heterochromia mode gogo
                     if (fillKey=="eye") and ("heterochromia" in newcols) and (newcols["heterochromia"]):
@@ -263,11 +263,17 @@ for pal in palettes.keys():
                             style = "fill-opacity:" + str(opacityOverride) + ";" + style #prepend
                     
                     style = style.replace(fillStyleText, "fill:" + newcols[rplKey] + ";")
-                
-                # unhide fur if enabled
-                if ("show_all" in newcols) and newcols["show_all"]:
-                    style = style.replace("display:none", "display:inline")
-            #<-- for elem in root.iter():
+            
+            # unhide fur if enabled
+            if ("show_all" in newcols) and newcols["show_all"]:
+                style = style.replace("display:none", "display:inline")
+            
+            # put back our style into elem
+            elem.attrib[style_key] = style
+        #<-- for elem in root.iter():
+        
+        # convert the elementtree back into a string
+        data = ET.tostring(root, encoding="Unicode")
         
         #check if files are already exported and if so, skip them
         allpngs = False
