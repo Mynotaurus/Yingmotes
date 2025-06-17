@@ -38,7 +38,7 @@ defaultcols = {
     "tail":        "#234567", #tail colour, only shown when show_all = True
     "heart_inner": "#ff5555", #fill colour on hearts
     "heart_outer": "#b10020", #line colour on hearts
-    
+
     "p2_main":        "#5fd3bc", #p2 primary colour
     "p2_eye":         "#ccfefe", #p2 eye colour
     "p2_line":        "#165044", #p2 line colours
@@ -50,11 +50,14 @@ defaultcols = {
     "p2_tail":        "#456723", #p2 tail colour, only shown when show_all = True
     "p2_heart_inner": "#00c3ff", #p2 fill colour on hearts
     "p2_heart_outer": "#0080a2", #p2 line colour on hearts
-    
+
     "show_all": False, #show_all shows all hidden layers, this renders both the hair and tail tuft
-    
-    "heterochromia": False #enable if you want each eye to have a different colour
-    
+
+    "heterochromia": False, #enable if you want each eye to have a different colour
+
+    "eye_left":  "#fefefe", # left eye colour, when heterochromia is enabled
+    "eye_right": "#fefefe", # right eye colour, when heterochromia is enabled
+
     # to hide either hair or tail seperately, set its colour to #0000, this makes it transparent (must be exactly #0000 to work)
 }
 
@@ -103,111 +106,110 @@ except:
 
 for pal in palettes.keys():
     newcols = {**defaultcols, **palettes[pal]} # merge palette overrides against default palette
-    
+
     # cache opacity override for each palette key if specified (#rgba or #rrggbbaa)
     newOpacity = {}
     for key in newcols.keys():
         colourValue = newcols[key]
         if not isinstance(colourValue, str): continue # skip non strings
-        
+
         opacityOverride = 1
-        
+
         if(len(colourValue)==5): # #rgba
             opacityOverride = int(colourValue[4],16)/15
             newcols[key] = colourValue[0:4] # trim alpha
         elif(len(newcols[key])==9): # #rrggbbaa
             opacityOverride = int(colourValue[7:9],16)/255
             newcols[key] = colourValue[0:7] # trim alpha
-        
+
         # override if needed
         if(opacityOverride < 1):
             newOpacity[key] = opacityOverride
-    
+
     #make all the folders!!
     print("- Making required directories for "+pal+"...")
-    
+
     for i in ["out/"+pal,"out/"+pal+"/svg","out/"+pal+"/svg/temp"]:
         try:
             os.mkdir(i)
         except:
             pass
-    
+
     for i in res:
         try:
             os.mkdir("out/"+pal+"/png"+str(i))
         except:
             pass
-        
+
         try:
             os.mkdir("out/"+pal+"/temp"+str(i))
         except:
             pass
-        
+
         if(doWebp):
             try:
                 os.mkdir("out/"+pal+"/webp"+str(i))
             except:
                 pass
-    
+
     if reverse: #make reversed directories too if we need them
         try:
             os.mkdir("out/"+pal+"/reversed/")
         except:
             pass
-        
+
         for i in res:
             try:
                 os.mkdir("out/"+pal+"/reversed/png"+str(i))
             except:
                 pass
-            
+
             try:
                 os.mkdir("out/"+pal+"/reversed/temp"+str(i))
             except:
                 pass
-    
+
     for vectorfile in svgs:
         if(len(sys.argv)>1+palette_count):
             if(vectorfile not in sys.argv):
                 continue #if files are specified as arguments, only export those files
-        
+
         data = ""
         print("- Changing "+vectorfile+" to "+pal+"...")
-        
+
         #hell yeah lets ctrl+h the heck out of this file
         with open("svg/"+vectorfile, 'r') as f:
             data = f.read()
-        
+
         # context-aware parsing
         root = ET.XML(data.encode("UTF-8"))
-        
+
         for elem in root.iter():
-            # only looking for paths
-            if (trim_xmlns(elem.tag)!="path"): continue
-            
-            # get style of path, or skip if it doesn't have style
+            # get style of element, or skip if it doesn't have style
             style_key = next((k for k in elem.attrib if trim_xmlns(k) == "style"), None)
             if style_key is None: continue
+
             style = elem.attrib[style_key]
-            
+
             # Locate fill/stroke that have colour literals matching a key in defaultcols; if so, mark for replacement
             strokeKey = None
             strokeStyleText = None
             fillKey = None
             fillStyleText = None
             fillRpl = None
-            
+
             for key, colour in defaultcols.items():
+                if (key=="eye_left") or (key=="eye_right"): continue # don't use these for scanning source svg
                 sT = f"stroke:{colour};"
                 fT = f"fill:{colour};"
-                
+
                 if sT in style:
                     strokeStyleText = sT
                     strokeKey = key
                 if fT in style:
                     fillStyleText = fT
                     fillKey = key
-            
+
             #<-- for elem in root.iter():
             if strokeKey is not None:
                 rplKey = "wehh"
@@ -219,12 +221,12 @@ for pal in palettes.keys():
                         rplKey = "eye_right"
                 else: # regular palette swap
                     rplKey = strokeKey
-                
+
                 opacityOverride = newOpacity.get(rplKey) # override opacity if necessary
-                
+
                 if(strokeKey==fillKey): # we can replace both at once if so
                     fillRpl = "fill:" + newcols[rplKey] + ";" # set fill's replacement here to save cycles (speedrunning)
-                    
+
                     if opacityOverride is not None:
                         # we can just set 'opacity' instead of 'fill-opacity' or 'stroke-opacity' separately
                         if ";opacity:1" in style:
@@ -236,14 +238,14 @@ for pal in palettes.keys():
                         style = style.replace(";stroke-opacity:1", ";stroke-opacity:" + str(opacityOverride))
                     else:
                         style = "stroke-opacity:" + str(opacityOverride) + ";" + style #prepend
-                
+
                 style = style.replace(strokeStyleText, "stroke:" + newcols[rplKey] + ";")
-            
+
             #<-- for elem in root.iter():
             if fillKey is not None:
                 if fillRpl is not None: # already know our fill replacement, and opacity already set
                     style = style.replace(fillStyleText, fillRpl)
-                
+
                 else:
                     rplKey = "wehh"
                     # heterochromia mode gogo
@@ -254,27 +256,27 @@ for pal in palettes.keys():
                             rplKey = "eye_right"
                     else: # regular palette swap
                         rplKey = fillKey
-                    
+
                     opacityOverride = newOpacity.get(rplKey) # override opacity if necessary
                     if opacityOverride is not None:
                         if ";fill-opacity:1" in style:
                             style = style.replace(";fill-opacity:1", ";fill-opacity:" + str(opacityOverride))
                         else:
                             style = "fill-opacity:" + str(opacityOverride) + ";" + style #prepend
-                    
+
                     style = style.replace(fillStyleText, "fill:" + newcols[rplKey] + ";")
-            
+
             # unhide fur if enabled
             if ("show_all" in newcols) and newcols["show_all"]:
                 style = style.replace("display:none", "display:inline")
-            
+
             # put back our style into elem
             elem.attrib[style_key] = style
         #<-- for elem in root.iter():
-        
+
         # convert the elementtree back into a string
         data = ET.tostring(root, encoding="Unicode")
-        
+
         #check if files are already exported and if so, skip them
         allpngs = False
         allreversed = False
@@ -291,21 +293,21 @@ for pal in palettes.keys():
                     if(allpngs and allreversed):
                         print(" - SVGs match and all PNGs exist. Skipping...")
                         continue
-        
+
         print(" - Saving vector "+pal+"/svg/"+vectorfile.replace("ying",pal)+"...")
         with open("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), 'w') as f:
             f.write(data)
-        
+
         for i in res:
             if not allpngs:
                 if(vectorfile in temps):
                     print(" - Saving image "+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/","")+"...")
                     convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/",""))
-                
+
                 else:
                     print(" - Saving image "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal)+"...")
                     convert_with_inkscape("out/"+pal+"/svg/"+vectorfile.replace("ying",pal), i, "out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
-            
+
             if reverse and not allreversed:
                 if(vectorfile in temps):
                     print("  - Reversing "+"/temp"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal).replace("temp/","")+"...")
@@ -315,7 +317,7 @@ for pal in palettes.keys():
                     print("  - Reversing "+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal)+"...")
                     img = Image.open("out/"+pal+"/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying",pal))
                     img.transpose(Image.Transpose.FLIP_LEFT_RIGHT).save("out/"+pal+"/reversed/png"+str(i)+"/"+vectorfile.replace(".svg",".png").replace("ying","rev"+pal))
-    
+
     for i in res:
         for anim_name in anim_data["anims"].keys(): 
             anim = anim_data["anims"][anim_name]
@@ -332,7 +334,7 @@ for pal in palettes.keys():
                     else:
                         im.append_file("out/"+pal+"/png"+str(i)+"/"+frame[0].replace("ying",pal),delay=frame[1])
                 im.save("out/"+pal+"/png"+str(i)+"/"+anim_name.replace("ying",pal))
-            
+
             if reverse: #do it again for reversed images if needed!
                 for frame in anim:
                     if not os.path.exists("out/"+pal+"/reversed/png"+str(i)+"/"+frame[0].replace("ying","rev"+pal)) and not os.path.exists("out/"+pal+"/reversed/temp"+str(i)+"/"+frame[0].replace("ying","rev"+pal).replace("temp/","")):
@@ -346,7 +348,7 @@ for pal in palettes.keys():
                         else:
                             im.append_file("out/"+pal+"/reversed/png"+str(i)+"/"+frame[0].replace("ying","rev"+pal),delay=frame[1])
                     im.save("out/"+pal+"/reversed/png"+str(i)+"/"+anim_name.replace("ying","rev"+pal))
-            
+
             if doWebp:
                 enc = webp.WebPAnimEncoder.new(i, i)
                 timestamp_ms = 0
@@ -363,7 +365,7 @@ for pal in palettes.keys():
                 animd = enc.assemble(timestamp_ms)
                 with open("out/"+pal+"/webp"+str(i)+"/"+anim_name.replace("ying",pal).replace(".png",".webp"), 'wb') as f:
                     f.write(animd.buffer())
-    
+
     for i in ["export","export/tarballs"]:
         try:
             os.mkdir(i)
