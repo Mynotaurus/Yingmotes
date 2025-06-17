@@ -173,23 +173,6 @@
            d="m 1150.289,1075.2222 c 0,120.7167 -151.8603,218.5769 -272.57702,218.5769 -120.71671,0 -164.57695,-71.8602 -164.57699,-192.5769 -2e-5,-120.71675 97.86024,-244.57702 218.57699,-244.57701 120.71672,-2e-5 218.57702,97.86025 218.57702,218.57701 z"
            sodipodi:nodetypes="sssss" />
       </g>
-      <g
-         id="g10350"
-         transform="rotate(16.523108,-1682.5554,4529.9736)"
-         inkscape:label="wizard hat"
-         style="display:none">
-        <ellipse
-           style="fill:#5a2ca0;stroke:#442178;stroke-width:128;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
-           id="path10133"
-           cx="-156.11845"
-           cy="137.38425"
-           rx="1183.3779"
-           ry="243.54478" />
-        <path
-           style="fill:#5a2ca0;stroke:#442178;stroke-width:128;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="m -574.04058,136.8866 194.29066,-688.84869 604.95045,-547.54641 22.07849,1223.14801"
-           id="path10248" />
-      </g>
       <path
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ffcb4c;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
          d="M 422.09799,125.10137 C 599.10012,348.40199 720.6887,588.66091 734.81454,861.80682"
