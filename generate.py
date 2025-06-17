@@ -229,13 +229,16 @@ for pal in palettes.keys():
 
                     if opacityOverride is not None:
                         # we can just set 'opacity' instead of 'fill-opacity' or 'stroke-opacity' separately
-                        if ";opacity:1" in style:
-                            style = style.replace(";opacity:1", ";opacity:" + str(opacityOverride))
+                        if "opacity:1" in style:
+                            # do not replace fill-opacity or stroke-opacity (they multiply); replace with a placeholder
+                            style = style.replace("-opacity", "~PLACEHOLDER~")
+                            style = style.replace("opacity:1", "opacity:" + str(opacityOverride))
+                            style = style.replace("~PLACEHOLDER~", "-opacity")
                         else:
                             style = "opacity:" + str(opacityOverride) + ";" + style #prepend
                 elif opacityOverride is not None:
-                    if ";stroke-opacity:1" in style:
-                        style = style.replace(";stroke-opacity:1", ";stroke-opacity:" + str(opacityOverride))
+                    if "stroke-opacity:1" in style:
+                        style = style.replace("stroke-opacity:1", "stroke-opacity:" + str(opacityOverride))
                     else:
                         style = "stroke-opacity:" + str(opacityOverride) + ";" + style #prepend
 
@@ -259,8 +262,8 @@ for pal in palettes.keys():
 
                     opacityOverride = newOpacity.get(rplKey) # override opacity if necessary
                     if opacityOverride is not None:
-                        if ";fill-opacity:1" in style:
-                            style = style.replace(";fill-opacity:1", ";fill-opacity:" + str(opacityOverride))
+                        if "fill-opacity:1" in style:
+                            style = style.replace("fill-opacity:1", "fill-opacity:" + str(opacityOverride))
                         else:
                             style = "fill-opacity:" + str(opacityOverride) + ";" + style #prepend
 
