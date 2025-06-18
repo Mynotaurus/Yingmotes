@@ -229,13 +229,17 @@ for pal in palettes.keys():
 
                     if opacityOverride is not None:
                         # we can just set 'opacity' instead of 'fill-opacity' or 'stroke-opacity' separately
+
+                        # avoid 'fill-opacity' and 'stroke-opacity' by swapping for placeholder
+                        style = style.replace("-opacity", "~PLACEHOLDER~")
+
                         if "opacity:1" in style:
-                            # do not replace fill-opacity or stroke-opacity (they multiply); replace with a placeholder
-                            style = style.replace("-opacity", "~PLACEHOLDER~")
                             style = style.replace("opacity:1", "opacity:" + str(opacityOverride))
-                            style = style.replace("~PLACEHOLDER~", "-opacity")
                         else:
                             style = "opacity:" + str(opacityOverride) + ";" + style #prepend
+
+                        # restore placeholders
+                        style = style.replace("~PLACEHOLDER~", "-opacity")
                 elif opacityOverride is not None:
                     if "stroke-opacity:1" in style:
                         style = style.replace("stroke-opacity:1", "stroke-opacity:" + str(opacityOverride))
