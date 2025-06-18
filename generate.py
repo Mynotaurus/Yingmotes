@@ -90,10 +90,10 @@ def trim_xmlns(tag):
 # ElementTree resolves xmlns of 'inkscape:label' like this i guess. angy angy
 inkscapeLabel = "{http://www.inkscape.org/namespaces/inkscape}label"
 
-# Find if the element is nested within a <g> with 'inkscape:label={name}'
-def in_group_labelled(name, elem):
+# Return true if the element, or one of its ancestors, has attribute 'inkscape:label="{name}"'
+def has_label(name, elem):
     while elem is not None:
-        if (trim_xmlns(elem.tag)=="g") and (elem.attrib.get(inkscapeLabel)==name):
+        if (elem.attrib.get(inkscapeLabel)==name):
             return True
         elem = elem.getparent()
     return False
@@ -215,7 +215,7 @@ for pal in palettes.keys():
                 rplKey = "wehh"
                 # heterochromia mode gogo
                 if (strokeKey=="eye") and ("heterochromia" in newcols) and (newcols["heterochromia"]):
-                    if in_group_labelled("left eye", elem): # find if we are on left eye
+                    if has_label("left eye", elem): # find if we are on left eye
                         rplKey = "eye_left"
                     else:
                         rplKey = "eye_right"
@@ -253,7 +253,7 @@ for pal in palettes.keys():
                     rplKey = "wehh"
                     # heterochromia mode gogo
                     if (fillKey=="eye") and ("heterochromia" in newcols) and (newcols["heterochromia"]):
-                        if in_group_labelled("left eye", elem): # find if we are on left eye
+                        if has_label("left eye", elem): # find if we are on left eye
                             rplKey = "eye_left"
                         else:
                             rplKey = "eye_right"

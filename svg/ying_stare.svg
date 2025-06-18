@@ -155,20 +155,20 @@
       </g>
       <g
          id="g15"
-         inkscape:label="right eye"
+         inkscape:label="left eye"
          style="display:inline;stroke-width:1.07692"
          transform="matrix(-0.92857508,0,0,0.92857508,1466.4498,-10.736953)">
         <path
            id="path14"
            style="opacity:1;fill:#fefefe;stroke:#65471b;stroke-width:68.9228;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke;stop-color:#000000"
-           inkscape:label="righteye"
+           inkscape:label="lefteye"
            d="m 1059.5005,1102.1225 c 0,120.7167 -144.81714,176.5452 -203.3269,191.6766 -116.87171,30.2246 -145.35607,-86.9916 -145.35611,-207.7083 -2e-5,-120.71677 93.68598,-227.99157 210.48876,-197.5015 83.72875,21.85648 138.19425,92.81644 138.19425,213.5332 z"
            sodipodi:nodetypes="sssss" />
         <path
            style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#65471b;stroke-width:51.6921;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
            d="M 840.57507,982.49252 V 1172.3674"
            id="path15"
-           inkscape:label="right pupil" />
+           inkscape:label="left pupil" />
       </g>
     </g>
     <path
