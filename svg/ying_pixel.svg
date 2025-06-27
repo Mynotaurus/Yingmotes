@@ -68,7 +68,8 @@
         <path
            id="path42"
            style="opacity:1;fill:#fefefe;fill-opacity:1;stroke:none;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:192;paint-order:fill markers stroke"
-           d="M 853.33398,853.33398 V 960 H 746.66602 v 213.334 H 853.33398 V 1280 H 1066.666 v -106.666 h 106.668 V 960 H 1066.666 V 853.33398 Z" />
+           d="M 853.33398,853.33398 V 960 H 746.66602 v 213.334 H 853.33398 V 1280 H 1066.666 v -106.666 h 106.668 V 960 H 1066.666 V 853.33398 Z"
+           inkscape:label="left eye" />
         <rect
            style="opacity:1;fill:#65471b;fill-opacity:1;stroke:none;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:192;paint-order:fill markers stroke"
            id="rect43"

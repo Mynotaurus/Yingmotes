@@ -2,3 +2,4 @@ apng
 pillow
 toml
 webp
+lxml
