@@ -58,6 +58,11 @@ defaultcols = {
     "eye_left":  "#fefefe", # left eye colour, when heterochromia is enabled
     "eye_right": "#fefefe", # right eye colour, when heterochromia is enabled
 
+    "p2_heterochromia": False, #enable if you want each eye for p2 to have a different colour
+
+    "p2_eye_left": "#ccfefe", # p2 left eye colour, when p2_heterochromia is enabled
+    "p2_eye_right": "#ccfefe", # p2 right eye colour, when p2_heterochromia is enabled
+
     # to hide either hair or tail seperately, set its colour to #0000, this makes it transparent (must be exactly #0000 to work)
 }
 
@@ -199,7 +204,7 @@ for pal in palettes.keys():
             fillRpl = None
 
             for key, colour in defaultcols.items():
-                if (key=="eye_left") or (key=="eye_right"): continue # don't use these for scanning source svg
+                if key in ("eye_left", "eye_right", "p2_eye_left", "p2_eye_right"): continue # don't use these for scanning source svg
                 sT = f"stroke:{colour};"
                 fT = f"fill:{colour};"
 
@@ -219,6 +224,11 @@ for pal in palettes.keys():
                         rplKey = "eye_left"
                     else:
                         rplKey = "eye_right"
+                elif (strokeKey=="p2_eye") and ("p2_heterochromia" in newcols) and (newcols["p2_heterochromia"]):
+                    if has_label("left eye", elem):
+                        rplKey = "p2_eye_left"
+                    else:
+                        rplKey = "p2_eye_right"
                 else: # regular palette swap
                     rplKey = strokeKey
 
@@ -261,6 +271,11 @@ for pal in palettes.keys():
                             rplKey = "eye_left"
                         else:
                             rplKey = "eye_right"
+                    elif (fillKey=="p2_eye") and ("p2_heterochromia" in newcols) and (newcols["p2_heterochromia"]):
+                        if has_label("left eye", elem):
+                            rplKey = "p2_eye_left"
+                        else:
+                            rplKey = "p2_eye_right"
                     else: # regular palette swap
                         rplKey = fillKey
 
