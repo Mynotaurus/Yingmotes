@@ -28,14 +28,14 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="0.40381058"
-     inkscape:cx="676.05956"
-     inkscape:cy="835.78792"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:cx="677.29776"
+     inkscape:cy="837.02611"
+     inkscape:window-width="2560"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="384"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g12988"
+     inkscape:current-layer="g3"
      inkscape:showpageshadow="2"
      inkscape:deskcolor="#d1d1d1" />
   <g
@@ -152,7 +152,8 @@
       </g>
       <g
          id="g3"
-         transform="rotate(-4.0275648,1387.2218,1069.7491)">
+         transform="rotate(-4.0275648,1387.2218,1069.7491)"
+         inkscape:label="hat">
         <ellipse
            style="display:inline;fill:#440055;stroke:#8800aa;stroke-width:54.5276;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
            id="path1"
