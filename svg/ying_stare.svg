@@ -77,7 +77,7 @@
        inkscape:label="ears">
       <path
          id="path13483-2"
-         style="display:inline;fill:#ffcb4c;stroke:#ffcb4c;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6.4, 6.4;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
+         style="display:inline;fill:#ffcb4c;stroke:#ffcb4c;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
          inkscape:label="right ear"
          d="m 3108.5862,79.380929 c -58.7269,-7.331362 -212.4612,260.558241 -243.3364,343.421411 -27.4894,73.77658 -106.4769,258.29041 -128.9021,310.5746 0,0 -70.6865,138.02528 -7.5963,312.15296 33.0827,91.3077 145.4308,107.0271 145.4308,107.0271 86.1277,-107.693 223.6356,-342.41569 257.8562,-563.22293 46.852,-302.31164 14.6309,-505.198921 -23.4522,-509.953141 z"
          sodipodi:nodetypes="sscscss"
@@ -85,7 +85,7 @@
          inkscape:transform-center-y="-374.20908" />
       <path
          id="path3"
-         style="display:inline;fill:#ffcb4c;stroke:#ffcb4c;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6.4, 6.4;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
+         style="display:inline;fill:#ffcb4c;stroke:#ffcb4c;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
          inkscape:label="right ear"
          d="m 1996.9685,70.168639 c 59.462,-5.143385 203.9395,268.293521 231.8237,352.252531 24.8264,74.75224 97.2323,262.08679 117.7927,315.17187 0,0 65.8518,140.56659 -4.5034,312.23926 -36.8923,90.0204 -150.7127,101.5531 -150.7127,101.5531 -82.5927,-110.8275 -200.0794,-353.92434 -225.962,-575.86515 -35.4363,-303.86362 -6.9981,-502.016242 31.5617,-505.351611 z"
          sodipodi:nodetypes="sscscss"

@@ -39,7 +39,7 @@
      inkscape:showpageshadow="2"
      inkscape:deskcolor="#d1d1d1" />
   <path
-     style="display:inline;fill:#ffcb4c;fill-opacity:1;stroke:#ffcb4c;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6.4, 6.4;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+     style="display:inline;fill:#ffcb4c;fill-opacity:1;stroke:#ffcb4c;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
      d="m 483.33782,1744.0345 c 145.43299,-80.8657 196.8188,-162.7307 276.04163,-339.3072 103.63069,-230.9781 96.1041,-368.4259 229.92764,-492.48722 -61.47977,148.35932 16.14901,439.75192 -30.97105,617.16362 -55.82408,210.1835 -122.44856,225.9525 -168.77812,203.182 z"
      id="path1"
      sodipodi:nodetypes="cscscc"
@@ -48,7 +48,7 @@
      inkscape:export-xdpi="72"
      inkscape:export-ydpi="72" />
   <path
-     style="display:none;fill:#234567;fill-opacity:1;stroke:#234567;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6.4, 6.4;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
+     style="display:none;fill:#234567;fill-opacity:1;stroke:#234567;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill;stop-color:#000000"
      d="M 1210.9116,553.7883 C 1026.7921,599.16649 927.33946,777.79152 854.09697,921.3022 l -27.70605,-91.29534 c -32.7544,209.00944 11.85925,347.02754 97.54612,382.62624 98.27166,-17.8587 189.41896,-146.6748 189.41896,-146.6748 16.9125,-79.19551 179.3758,-142.51658 293.9707,-145.04719 -21.4967,-37.20057 -145.0277,-34.61944 -196.8611,-8.05537 -3.6709,-114.44179 35.2804,-219.36097 291.1828,-275.80967 -89.7859,-9.61457 -199.2189,-18.20559 -342.2137,102.48555 -75.444,-26.29142 10.4387,-124.10218 51.4769,-185.74332 z"
      id="path7036-9"
      sodipodi:nodetypes="cccccccccc"
