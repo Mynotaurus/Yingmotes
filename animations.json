@@ -219,5 +219,11 @@
     "aying_talk.png":[
         ["aying_talkopen.png", 150],
         ["aying_talkclosed.png",150]
+    ],
+    "aying_ear_wiggle.png":[
+        ["ying_ears_up.png", 200],
+        ["aying_ears_lerp.png",50],
+        ["ying_ears_down.png",200],
+        ["aying_ears_lerp.png",50]
     ]
 }}
