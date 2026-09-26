@@ -7,7 +7,7 @@
    width="1706.6667"
    height="1706.6667"
    viewBox="0 0 1706.6667 1706.6667"
-   sodipodi:docname="ying_microphone_out.svg"
+   sodipodi:docname="aying_talkclosed.svg"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    inkscape:export-filename="D:\Pictures\yingmotes\ying_mug.png"
    inkscape:export-xdpi="72"
@@ -29,11 +29,11 @@
      showgrid="false"
      inkscape:zoom="0.22646483"
      inkscape:cx="662.3545"
-     inkscape:cy="995.7396"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:cy="993.53176"
+     inkscape:window-width="2560"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="g12988"
      inkscape:showpageshadow="2"
@@ -178,82 +178,6 @@
          id="path6280-0"
          sodipodi:nodetypes="cc"
          inkscape:label="eyelash right small" />
-      <g
-         id="g3"
-         transform="matrix(0.48887886,-0.24267568,0.24267568,0.48887886,484.89612,756.8935)"
-         style="display:inline">
-        <rect
-           style="opacity:1;fill:#333333;stroke:#333333;stroke-width:95.9998;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:192;paint-order:fill markers stroke"
-           id="rect1"
-           width="244.39606"
-           height="1211.4391"
-           x="-1297.5513"
-           y="580.12305"
-           transform="rotate(-14.037417)"
-           ry="307.01282"
-           rx="307.01282" />
-        <path
-           style="opacity:1;fill:none;stroke:#999999;stroke-width:96;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:192;stroke-opacity:1;paint-order:fill markers stroke"
-           id="circle5"
-           transform="rotate(-14.037417)"
-           sodipodi:type="arc"
-           sodipodi:cx="-1179.1509"
-           sodipodi:cy="738.32312"
-           sodipodi:rx="263.62921"
-           sodipodi:ry="263.62921"
-           sodipodi:start="0.948925"
-           sodipodi:end="2.1510133"
-           sodipodi:arc-type="arc"
-           d="m -1025.5718,952.59823 a 263.62921,263.62921 0 0 1 -298.102,6.20953"
-           sodipodi:open="true" />
-        <circle
-           style="opacity:1;fill:#666666;stroke:#666666;stroke-width:96;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:192;paint-order:fill markers stroke"
-           id="path3"
-           cx="-1175.3533"
-           cy="696.24542"
-           r="263.62921"
-           transform="rotate(-14.037417)" />
-        <path
-           style="opacity:1;fill:#4d4d4d;stroke:#1a1a1a;stroke-width:96;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:192;paint-order:fill markers stroke"
-           d="m -782.33634,1371.0151 53.45427,200.539"
-           id="path4" />
-        <path
-           style="opacity:1;fill:none;stroke:#999999;stroke-width:96;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:192;paint-order:fill markers stroke"
-           d="m -1253.1586,1054.021 c 0,0 120.2919,69.3188 327.46039,17.8948 207.16846,-51.424 257.39404,-131.04243 257.39404,-131.04243"
-           id="path5"
-           sodipodi:nodetypes="czc" />
-      </g>
-      <g
-         id="layer2"
-         inkscape:label="hand"
-         transform="matrix(-0.68649602,0.54324547,0.62659305,0.99134609,-317.09625,150.64304)"
-         style="display:inline;fill:none;fill-opacity:1;stroke:#888800;stroke-width:0.989687;stroke-opacity:1">
-        <path
-           style="fill:none;fill-opacity:1;stroke:#a18020;stroke-width:95.0099;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="m 83.265067,1455.261 c 0,0 -46.374345,55.1899 -58.970242,72.2879"
-           id="path15392"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-opacity:1;stroke:#a18020;stroke-width:95.0099;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="m 277.63359,1471.865 c -59.8589,30.7091 -127.24835,42.2017 -188.139119,25.2875"
-           id="path20257"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-opacity:1;stroke:#a18020;stroke-width:95.0099;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="m 83.585394,1562.0096 c 61.353666,-0.072 121.637446,-17.8548 182.068076,-33.2069"
-           id="path20259"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-opacity:1;stroke:#a18020;stroke-width:95.0099;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="m 71.288958,1621.58 c 57.429262,0.9097 115.240372,-0.2554 179.011012,-33.8028"
-           id="path20261"
-           sodipodi:nodetypes="cc" />
-        <path
-           style="fill:none;fill-opacity:1;stroke:#a18020;stroke-width:95.0099;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
-           d="m 89.494447,1497.1525 c 0,0 -88.0865714,16.5046 -83.8990211,77.9416 4.1875585,61.437 65.6935321,46.4859 65.6935321,46.4859 l 18.205513,-124.4275"
-           id="path20376"
-           sodipodi:nodetypes="cscc" />
-      </g>
     </g>
   </g>
 </svg>
