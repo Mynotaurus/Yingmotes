@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg824"
+   width="1706.667"
+   height="1706.6667"
+   viewBox="0 0 1706.6669 1706.6667"
+   sodipodi:docname="ying_longcat_middle.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   inkscape:export-filename="D:\Pictures\yingmotes\ying_smol.png"
+   inkscape:export-xdpi="72"
+   inkscape:export-ydpi="72"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs828" />
+  <sodipodi:namedview
+     id="namedview826"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.11760792"
+     inkscape:cx="-3248.0806"
+     inkscape:cy="102.03394"
+     inkscape:window-width="2560"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="layer1"
+     inkscape:label="Ying"
+     style="display:inline"
+     inkscape:groupmode="layer">
+    <path
+       style="display:inline;fill:#ffcb4c;fill-opacity:1;stroke:#ffcb4c;stroke-width:92.2589;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;paint-order:fill markers stroke;stop-color:#000000"
+       d="M 989.90261,-4.0352895 989.88091,1800.3416 1146.3314,1789.8 1144.4155,-1.5920179 Z"
+       id="path2053"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#ffcb4c;stroke:#ffcb4c;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;fill-opacity:1;stroke-opacity:1"
+       d="m 989.89914,284.84498 -75.84505,382.62707 75.84088,-36.1369 z"
+       id="path1" />
+    <path
+       style="fill:#ffcb4c;fill-opacity:1;stroke:#ffcb4c;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 989.88804,1207.4018 -50.32547,267.839 50.32256,-25.5085 z"
+       id="path2" />
+    <path
+       style="fill:#ffcb4c;fill-opacity:1;stroke:#ffcb4c;stroke-width:48;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       d="m 1145.2538,782.26533 0.2137,199.79124 55.5571,38.28283 z"
+       id="path3" />
+  </g>
+</svg>
