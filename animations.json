@@ -225,5 +225,10 @@
         ["aying_ears_lerp.png",50],
         ["ying_ears_down.png",200],
         ["aying_ears_lerp.png",50]
+    ],
+    "aying_sneeze.png":[
+        ["aying_sneeze.png", 400],
+        ["aying_halflid.png",400],
+        ["ying_yell_sad.png",200]
     ]
 }}
